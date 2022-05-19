@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // 動けないときの処理
-public class CannoutMove : MonoBehaviour
+public class CannoutMove : IAction
 {
     [SerializeField] Process_StateMachine stateMachine;
 
-    void Update()
+    public override void _update()
     {
         Debug.Log("その先は壁だ");
 

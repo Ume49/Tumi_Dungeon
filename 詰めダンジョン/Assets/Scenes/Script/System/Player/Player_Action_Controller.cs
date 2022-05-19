@@ -6,7 +6,6 @@ public class Player_Action_Controller : MonoBehaviour
 {
     public enum Action
     {
-        Null,
         CannotMove,
         Move,
         Attack
@@ -14,37 +13,24 @@ public class Player_Action_Controller : MonoBehaviour
 
     public Action current_action;
 
-    [SerializeField] MonoBehaviour cannot_move_script;
-    [SerializeField] MonoBehaviour move_script;
-    [SerializeField] MonoBehaviour attack_script;
+    [SerializeField] IAction cannot_move_script;
+    [SerializeField] IAction move_script;
+    [SerializeField] IAction attack_script;
 
-    private void OnEnable()
+    private void Update()
     {
-        // とりあえず全部無効化
-        cannot_move_script.enabled = false;
-        move_script.enabled = false;
-        attack_script.enabled = false;
-
-        // 有効化された時にどの行動スクリプトを有効化するのか判断
+        // ステートに合わせて専用の更新関数呼び出し
         switch (current_action)
         {
-            case Action.CannotMove:
-                cannot_move_script.enabled = true;
-                break;
             case Action.Move:
-                move_script.enabled = true;
+                move_script._update();
+                break;
+            case Action.CannotMove:
+                cannot_move_script._update();
                 break;
             case Action.Attack:
-                attack_script.enabled = true;
+                attack_script._update();
                 break;
         }
-    }
-
-    private void OnDisable()
-    {
-        // 全部無効化
-        cannot_move_script.enabled = false;
-        move_script.enabled = false;
-        attack_script.enabled = false;
     }
 }

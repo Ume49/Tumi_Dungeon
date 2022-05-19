@@ -21,6 +21,8 @@ public class Move_Check : MonoBehaviour
         // 縦と横が同時に押されている場合もスキップ
         if (Mathf.Abs(input_result.x) == Mathf.Abs(input_result.y)) return;
 
+        // *移動をセット
+
         // 方向添え字ベクトルを計算
         Vector2Int index_vec;
 
@@ -50,7 +52,7 @@ public class Move_Check : MonoBehaviour
             controller.current_action = Player_Action_Controller.Action.Move;
 
             // ワールド座標の目的地をセット
-            player_move_script.destination = indexToPos.Get(current_destination);
+            player_move_script.SetDestination(current_destination);
         }
         else
         {   // 行けない場合

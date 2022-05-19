@@ -9,7 +9,7 @@ using UnityEngine;
 キャラクターが持っている座標データを動かす
 
 */
-public class Move : MonoBehaviour
+public class Move : IAction
 {
     [SerializeField] Process_StateMachine stateMachine;
     [SerializeField] IndexToPos indexToPos;
@@ -29,7 +29,7 @@ public class Move : MonoBehaviour
 
     }
 
-    private void Update()
+    public override void _update()
     {
         transform.position = Vector3.MoveTowards(transform.position, destination, speed * Time.deltaTime);
 
