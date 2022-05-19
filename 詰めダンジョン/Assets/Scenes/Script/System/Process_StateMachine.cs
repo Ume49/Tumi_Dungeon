@@ -35,6 +35,8 @@ public class Process_StateMachine : MonoBehaviour
         {
             state_data = value;
 
+            Debug.Log(state_data);
+
             Switch();
         }
     }
