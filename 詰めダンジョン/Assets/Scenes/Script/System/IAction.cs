@@ -4,5 +4,6 @@ using UnityEngine;
 
 public abstract class IAction : MonoBehaviour
 {
-    virtual public void _update() { }
+    ///<summary> 返り値：処理が終了しているならtrue </summary>
+    virtual public bool _update() { return false; }
 }

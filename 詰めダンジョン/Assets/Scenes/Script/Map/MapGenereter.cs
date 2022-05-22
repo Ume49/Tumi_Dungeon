@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
+delegate void ref_Action(string tag, ref Transform[,] array);
+
 // シーンのオブジェクトからマップ情報を生成するクラス
 public class MapGenereter : MonoBehaviour
 {
@@ -76,7 +78,7 @@ public class MapGenereter : MonoBehaviour
 
         // タグで抽出したオブジェクトを指定のマップの対応の位置に入れる関数 
         // *動的オブジェクトと静的オブジェクトでマップ生成処理がほぼ同じなので
-        System.Action<string, Transform[,]> serch_and_assign = (string tag, Transform[,] map) =>
+        ref_Action serch_and_assign = (string tag, ref Transform[,] map) =>
         {
             // 抽出
             List<Transform> current_object = all_object.FindAll(x => x.CompareTag(tag));
@@ -100,10 +102,10 @@ public class MapGenereter : MonoBehaviour
         };
 
         // 動的オブジェクトマップを作成
-        serch_and_assign(dynamic_object_tag, map_class.dynamic_object_map);
+        serch_and_assign(dynamic_object_tag, ref map_class.dynamic_object_map);
 
         // 静的オブジェクトマップを作成
-        serch_and_assign(static_object_tag, map_class.static_object_map);
+        serch_and_assign(static_object_tag, ref map_class.static_object_map);
     }
 }
 

@@ -11,9 +11,9 @@ using UnityEngine;
 */
 public class Move : IAction
 {
-    [SerializeField] Process_StateMachine stateMachine;
     [SerializeField] IndexToPos indexToPos;
-    [SerializeField] MAP map;
+    [SerializeField] DynamicMap_Move map_mover;
+    [SerializeField] Now_Position_onMap player_index_pos;
     [SerializeField] float speed;
     [SerializeField] Vector3 destination;
 
@@ -22,21 +22,18 @@ public class Move : IAction
         // 実際の移動に使う座標を決定
         destination = indexToPos.Get(destination_index);
 
-        // キャラクターが持っているインデックス座標を変更 
-        GetComponent<Now_Position_onMap>().index = destination_index;
-
         // マップ上での位置を変更
+        map_mover.Move(player_index_pos.index, destination_index);
 
+        // キャラクターが持っているインデックス座標を変更 
+        player_index_pos.index = destination_index;
     }
 
-    public override void _update()
+    public override bool _update()
     {
         transform.position = Vector3.MoveTowards(transform.position, destination, speed * Time.deltaTime);
 
-        if (transform.position == destination)
-        {
-            // とりあえず戻す
-            stateMachine.state = Process_StateMachine.State.Input_Check;
-        }
+        // 現在座標が目的地と一致しているなら処理を終了
+        return transform.position == destination;
     }
 }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Attack : IAction
 {
-    public override void _update()
+    public override bool _update()
     {
-
+        return false;
     }
 }

@@ -12,10 +12,17 @@ public class Movable_Checker : MonoBehaviour
     {
         try
         {
-            return map.collider_map[destination_index.x, destination_index.y];
+
+            bool colide = map.collider_map[destination_index.x, destination_index.y];
+
+            bool is_null = map.dynamic_object_map[destination_index.x, destination_index.y] == null;
+
+            // 移動先に壁がなく、かつエネミーなどの競合オブジェクトがない場合のみtrue
+            return colide && is_null;
         }
         catch (System.IndexOutOfRangeException)
         {
+            // そもそも配列外参照をしようとしている場合はfalse
             return false;
         }
     }
