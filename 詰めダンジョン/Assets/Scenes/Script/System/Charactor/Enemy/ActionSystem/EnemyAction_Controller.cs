@@ -4,22 +4,17 @@ using UnityEngine;
 
 public class EnemyAction_Controller : MonoBehaviour
 {
-    [SerializeField] List<IEnemyJudge> enemies;
+    [SerializeField] Process_StateMachine state;
 
     private void OnEnable()
     {
-        enemies = new List<IEnemyJudge>();
-
-        // 1段下�?�子要�?を�?�て取�?
-        // *ターン経過ごとにエネミーの状況が変わって�?る�?�で毎回取得し直�?
+        // 1段下の子要素からエネミーの情報を全部取得
+        // 1ターンごとにエネミーの状況が変わっているため毎回取得し直す
         foreach (Transform w in transform)
         {
-
+            w.GetComponent<IEnemyJudge>().Judge();
         }
-    }
 
-    void Update()
-    {
-
+        state.Set_NextState();
     }
 }

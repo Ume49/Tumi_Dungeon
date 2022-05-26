@@ -6,7 +6,7 @@ public class EnemyJudge_Wait : IEnemyJudge
 {
     public override void Judge()
     {
-        // ‚È‚É‚à‚µ‚È‚¢
+        // ãªã«ã‚‚ã—ãªã„
         return;
     }
 }

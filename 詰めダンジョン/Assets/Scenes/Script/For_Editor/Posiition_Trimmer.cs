@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-// ¬”ŒÌ‚Éƒoƒ‰‚¯‚Ä‚¢‚éÀ•W‚ðReset‚Å®Œ`‚·‚é
+// å°æ•°æ•…ã«ãƒãƒ©ã‘ã¦ã„ã‚‹åº§æ¨™ã‚’Resetã§æ•´å½¢ã™ã‚‹
 public class Posiition_Trimmer : MonoBehaviour
 {
     private void Reset()
@@ -13,10 +13,10 @@ public class Posiition_Trimmer : MonoBehaviour
 
     public void Trim()
     {
-        // ƒAƒ^ƒbƒ`‚³‚ê‚Ä‚¢‚éƒIƒuƒWƒFƒNƒg‚ÌÀ•W‚ð®”‚É‚·‚é
+        // ã‚¢ã‚¿ãƒƒãƒã•ã‚Œã¦ã„ã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®åº§æ¨™ã‚’æ•´æ•°ã«ã™ã‚‹
         Vector3 pos = gameObject.transform.position;
 
-        // ®Œ`ˆ—
+        // æ•´å½¢å‡¦ç†
         Func<float, float> seikei = x => (float)Math.Round(x);
 
         gameObject.transform.position = new Vector3(seikei(pos.x), seikei(pos.y), seikei(pos.z));
