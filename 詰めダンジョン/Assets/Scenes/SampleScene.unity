@@ -2818,8 +2818,8 @@ GameObject:
   - component: {fileID: 377434368243886067}
   - component: {fileID: 5708038709386311445}
   - component: {fileID: 5708038709386311444}
-  - component: {fileID: 377434368243886066}
   - component: {fileID: 377434368243886068}
+  - component: {fileID: 377434368243886066}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Dynamic_Object
@@ -2836,12 +2836,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 377434368243886065}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8320bb93a9a0a484e83182366b08c46d, type: 3}
+  m_Script: {fileID: 11500000, guid: 35db8d47543c35e4db2740688de26f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   map: {fileID: 1842040899363374919}
   index_position: {fileID: 5708038709386311444}
-  player_name: 
 --- !u!114 &377434368243886067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2988,6 +2987,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 672101211919498187}
+  - component: {fileID: 1855036833153441951}
   - component: {fileID: 1855036833153441950}
   m_Layer: 0
   m_Name: Enemies
@@ -3005,7 +3005,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1855036833153441949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3f2bda821db3ef4f89439889adcaeda, type: 3}
+  m_Script: {fileID: 11500000, guid: 5082b7b6ef15ef5418534a703cd689db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  current_action: {fileID: 0}
+  state: {fileID: 4579797161966893410}
+--- !u!114 &1855036833153441951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855036833153441949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c8795bc65d81c4fb5479a6e1adeb1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemies: []
@@ -3307,7 +3321,7 @@ MonoBehaviour:
   player_act_script:
   - {fileID: 3415187823079119329}
   enemy_judge_script:
-  - {fileID: 1855036833153441950}
+  - {fileID: 0}
   enemy_act_script: []
 --- !u!4 &4793174224946067829
 Transform:

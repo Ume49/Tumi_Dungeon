@@ -4,6 +4,6 @@ using UnityEngine;
 
 public abstract class IAction : MonoBehaviour
 {
-    ///<summary> è¿”ã‚Šå€¤ï¼šå‡¦ç†ãŒçµ‚äº†ã—ã¦ã„ã‚‹ãªã‚‰true </summary>
-    virtual public bool _update() { return false; }
+    ///<summary> ˆ—‚ªI—¹‚µ‚Ä‚é‚È‚çtrue‚ğ•Ô‚· </summary>
+    public abstract bool _update();
 }
