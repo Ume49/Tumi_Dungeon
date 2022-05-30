@@ -3022,7 +3022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c8795bc65d81c4fb5479a6e1adeb1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: []
+  state: {fileID: 4579797161966893410}
 --- !u!114 &1956103794611582621
 MonoBehaviour:
   m_ObjectHideFlags: 0

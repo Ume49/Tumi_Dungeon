@@ -1,10 +1,10 @@
 Using pre-set license
-Built from '2020.3/release' branch; Version is '2020.3.34f1 (9a4c9c70452b) revision 10112156'; Using compiler version '192528614'; Build Type 'Release'
+Built from '2020.3/staging' branch; Version is '2020.3.35f1 (18e4db7a9996) revision 1631451'; Using compiler version '192528614'; Build Type 'Release'
 OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'ja' Physical Memory: 32717 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\2020.3.34f1\Editor\Unity.exe
+C:\Program Files\2020.3.35f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
@@ -15,14 +15,14 @@ E:/E_repos/Tumi_Dungeon/詰めダンジョン
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50389
+51270
 Successfully changed project path to: E:/E_repos/Tumi_Dungeon/詰めダンジョン
 E:/E_repos/Tumi_Dungeon/詰めダンジョン
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 30.00 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 34.25 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Initialize engine version: 2020.3.34f1 (9a4c9c70452b)
-[Subsystems] Discovering subsystems at path C:/Program Files/2020.3.34f1/Editor/Data/Resources/UnitySubsystems
+Initialize engine version: 2020.3.35f1 (18e4db7a9996)
+[Subsystems] Discovering subsystems at path C:/Program Files/2020.3.35f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path E:/E_repos/Tumi_Dungeon/詰めダンジョン/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
@@ -32,123 +32,92 @@ Direct3D:
     VRAM:     5991 MB
     Driver:   30.0.15.1165
 Initialize mono
-Mono path[0] = 'C:/Program Files/2020.3.34f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/2020.3.34f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/2020.3.34f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56012
+Mono path[0] = 'C:/Program Files/2020.3.35f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/2020.3.35f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/2020.3.35f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56788
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/2020.3.34f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: C:/Program Files/2020.3.34f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002294 seconds.
+Register platform support module: C:/Program Files/2020.3.35f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002057 seconds.
 Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 29.04 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 31.18 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.504 seconds
+- Completed reload, in  0.560 seconds
 Domain Reload Profiling:
-	ReloadAssembly (504ms)
-		BeginReloadAssembly (58ms)
+	ReloadAssembly (560ms)
+		BeginReloadAssembly (70ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (381ms)
-			LoadAssemblies (57ms)
+		EndReloadAssembly (416ms)
+			LoadAssemblies (66ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (125ms)
+			SetupTypeCache (135ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (25ms)
-			SetupLoadedEditorAssemblies (137ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (154ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (29ms)
-				BeforeProcessingInitializeOnLoad (11ms)
-				ProcessInitializeOnLoadAttributes (70ms)
-				ProcessInitializeOnLoadMethodAttributes (22ms)
+				RefreshPlugins (31ms)
+				BeforeProcessingInitializeOnLoad (13ms)
+				ProcessInitializeOnLoadAttributes (81ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002173 seconds.
+Registered in 0.002383 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000001ED79726430 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED79A4E3F0 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED79731A40 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED799B8220 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED799B8220 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED7A139010 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED7A139010 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED7A139010 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED7A161620 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED7936B830 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED7902D310 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED79C18020 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED7902D310 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED79C2AA30 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.37 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.827 seconds
+- Completed reload, in  1.041 seconds
 Domain Reload Profiling:
-	ReloadAssembly (828ms)
-		BeginReloadAssembly (130ms)
+	ReloadAssembly (1042ms)
+		BeginReloadAssembly (140ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (18ms)
-		EndReloadAssembly (643ms)
-			LoadAssemblies (80ms)
+		EndReloadAssembly (845ms)
+			LoadAssemblies (88ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (220ms)
+			SetupTypeCache (274ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (247ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (340ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (76ms)
-				ProcessInitializeOnLoadAttributes (148ms)
-				ProcessInitializeOnLoadMethodAttributes (11ms)
-				AfterProcessingInitializeOnLoad (7ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (88ms)
+				ProcessInitializeOnLoadAttributes (221ms)
+				ProcessInitializeOnLoadMethodAttributes (16ms)
+				AfterProcessingInitializeOnLoad (10ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (2ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.37 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1613 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.4 MB.
-System memory in use after: 74.4 MB.
+System memory in use before: 77.0 MB.
+System memory in use after: 77.1 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2050.
-Total: 2.456900 ms (FindLiveObjects: 0.130600 ms CreateObjectMapping: 0.034300 ms MarkObjects: 2.230900 ms  DeleteObjects: 0.060400 ms)
+Total: 2.946500 ms (FindLiveObjects: 0.185600 ms CreateObjectMapping: 0.036100 ms MarkObjects: 2.644000 ms  DeleteObjects: 0.079400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -162,176 +131,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Font/SOURCEHANCODEJP 5.TTC
-  artifactKey: Guid(bebb17e0d33a0c74fa991ab9062a39f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Font/SOURCEHANCODEJP 5.TTC using Guid(bebb17e0d33a0c74fa991ab9062a39f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6f989aba5c3e6a0a3488b3d7c43250c') in 0.305505 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000239 seconds.
-  path: Assets/Font/SOURCEHANCODEJP 7.TTC
-  artifactKey: Guid(998d598cadd5d704fae2e1dc8c585989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Font/SOURCEHANCODEJP 7.TTC using Guid(998d598cadd5d704fae2e1dc8c585989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dded307649234db843a80942c462888') in 0.042143 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000253 seconds.
-  path: Assets/Font/SOURCEHANCODEJP 6.TTC
-  artifactKey: Guid(4d0c85389c271cd4183761de556eaf30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Font/SOURCEHANCODEJP 6.TTC using Guid(4d0c85389c271cd4183761de556eaf30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a41dc9033495a2b946423cc779f47e00') in 0.039486 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000211 seconds.
-  path: Assets/Font/SOURCEHANCODEJP 4.TTC
-  artifactKey: Guid(d44db49a3e6158f4b999f68aed936079) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Font/SOURCEHANCODEJP 4.TTC using Guid(d44db49a3e6158f4b999f68aed936079) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '021fe72e0cfda8190d52c872e6fd3dc0') in 0.039495 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000198 seconds.
-  path: Assets/Font/SOURCEHANCODEJP 11.TTC
-  artifactKey: Guid(48a48b8d558e4804f91fb20960439881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Font/SOURCEHANCODEJP 11.TTC using Guid(48a48b8d558e4804f91fb20960439881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41b952dd4446726268d3540cae15d9cf') in 0.041640 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000179 seconds.
-  path: Assets/Font/SOURCEHANCODEJP 12.TTC
-  artifactKey: Guid(682953a074b98f842bd06a388dee4007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Font/SOURCEHANCODEJP 12.TTC using Guid(682953a074b98f842bd06a388dee4007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8852c5e466db7b877fc9877460bbeba') in 0.041188 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000155 seconds.
-  path: Assets/Font/SOURCEHANCODEJP 2.TTC
-  artifactKey: Guid(142815cfbd3e859409e9f5d3f8e7f7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Font/SOURCEHANCODEJP 2.TTC using Guid(142815cfbd3e859409e9f5d3f8e7f7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '632c3e7b8ba8a3ebad47a0ab12ec9c15') in 0.039655 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000198 seconds.
-  path: Assets/Font/SOURCEHANCODEJP 9.TTC
-  artifactKey: Guid(d196f21eed6c25e4f9ce799d7dc1b90f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Font/SOURCEHANCODEJP 9.TTC using Guid(d196f21eed6c25e4f9ce799d7dc1b90f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9904069fc42e81ee3a0d1ff4e9abb7bc') in 0.039114 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000133 seconds.
-  path: Assets/Font/SOURCEHANCODEJP 13.TTC
-  artifactKey: Guid(335bcfe80b01fb34b8d4d69838c2d79b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Font/SOURCEHANCODEJP 13.TTC using Guid(335bcfe80b01fb34b8d4d69838c2d79b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2558983ace35062d9eedd28d12c24291') in 0.040683 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000154 seconds.
-  path: Assets/Font/SOURCEHANCODEJP 1.TTC
-  artifactKey: Guid(6a07dec61558ddc459f56a1866e7ae1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Font/SOURCEHANCODEJP 1.TTC using Guid(6a07dec61558ddc459f56a1866e7ae1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ceee90111040d6ca4466aaf0133c4f3e') in 0.038081 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000145 seconds.
-  path: Assets/Font/SOURCEHANCODEJP 10.TTC
-  artifactKey: Guid(3c4d9dcdd2b8bd9458cdb0e2f646382d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Font/SOURCEHANCODEJP 10.TTC using Guid(3c4d9dcdd2b8bd9458cdb0e2f646382d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d76dbdc8e5ec2e63d53f205ff5d447f') in 0.218241 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000143 seconds.
-  path: Assets/Font/SOURCEHANCODEJP 3.TTC
-  artifactKey: Guid(9795b40335dcce141abf064fa359b378) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Font/SOURCEHANCODEJP 3.TTC using Guid(9795b40335dcce141abf064fa359b378) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f5b0965823833df15686beecc1279d3') in 0.040690 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000127 seconds.
-  path: Assets/Font/SOURCEHANCODEJP.TTC
-  artifactKey: Guid(7411262b88ce3f343b55d577a506c29a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Font/SOURCEHANCODEJP.TTC using Guid(7411262b88ce3f343b55d577a506c29a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92fc86ff17bf3d1fcaa0e6dfdc6be1cb') in 0.041669 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000168 seconds.
-  path: Assets/Font/SOURCEHANCODEJP 8.TTC
-  artifactKey: Guid(9c015546192578f47aec3abda545deb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Font/SOURCEHANCODEJP 8.TTC using Guid(9c015546192578f47aec3abda545deb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8931863f0477710684bf5c79879e8c95') in 0.213830 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 146.828855 seconds.
-  path: Assets/Scenes/Script/System/Charactor/Enemy/ActionSystem
-  artifactKey: Guid(690907a36d4b6364f900f7eb5d7fd944) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Script/System/Charactor/Enemy/ActionSystem using Guid(690907a36d4b6364f900f7eb5d7fd944) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c77df170415c1ac134dc1fd81ec6b86') in 0.005628 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002234 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000001ED750A6040 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EBED746550 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED79806010 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED7E11D050 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED7CF8AF70 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED7933C020 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED79806010 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED794BE010 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED7CF8AF70 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED7C979020 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED7E11D050 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED792E86A0 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED7E11D050 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ED79537470 doesn't match image E:\E_repos\Tumi_Dungeon\詰めダンジョン\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.764 seconds
-Domain Reload Profiling:
-	ReloadAssembly (765ms)
-		BeginReloadAssembly (97ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (28ms)
-		EndReloadAssembly (616ms)
-			LoadAssemblies (77ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (214ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (31ms)
-			SetupLoadedEditorAssemblies (232ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (75ms)
-				ProcessInitializeOnLoadAttributes (136ms)
-				ProcessInitializeOnLoadMethodAttributes (10ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (2ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1594 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 76.3 MB.
-System memory in use after: 76.4 MB.
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2097.
-Total: 2.453500 ms (FindLiveObjects: 0.147000 ms CreateObjectMapping: 0.034900 ms MarkObjects: 2.251800 ms  DeleteObjects: 0.019100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  path: Assets/Scenes/Script/System/Charactor/Enemy/ActionSystem/EnemyAction_Operator.cs
+  artifactKey: Guid(5082b7b6ef15ef5418534a703cd689db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Script/System/Charactor/Enemy/ActionSystem/EnemyAction_Operator.cs using Guid(5082b7b6ef15ef5418534a703cd689db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b338e30f13f6f8aa9156fbad2290383') in 0.027623 seconds 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
