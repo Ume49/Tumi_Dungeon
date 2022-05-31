@@ -12,7 +12,9 @@ public class EnemyAction_Controller : MonoBehaviour
         // 1ターンごとにエネミーの状況が変わっているため毎回取得し直す
         foreach (Transform w in transform)
         {
-            w.GetComponent<IEnemyJudge>().Judge();
+            var judge = w.GetComponent<IEnemyJudge>();
+
+            judge.Judge();
         }
 
         state.Set_NextState();

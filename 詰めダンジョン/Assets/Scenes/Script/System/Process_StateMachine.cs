@@ -41,7 +41,26 @@ public class Process_StateMachine : MonoBehaviour
 
     public void Set_NextState()
     {
-        state = (State)((int)(state_data + 1) % 4);
+        // 次のステートを決定
+        State next_state = state_data;
+
+        switch (state_data)
+        {
+            case State.Input_Check:
+                next_state = State.Player_Act;
+                break;
+            case State.Player_Act:
+                next_state = State.Enemy_Judge;
+                break;
+            case State.Enemy_Judge:
+                next_state = State.Enemy_Act;
+                break;
+            case State.Enemy_Act:
+                next_state = State.Input_Check;
+                break;
+        }
+
+        state_data = next_state;
     }
 
 
