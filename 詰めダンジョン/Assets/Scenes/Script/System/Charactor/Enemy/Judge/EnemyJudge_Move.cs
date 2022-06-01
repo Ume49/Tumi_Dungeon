@@ -1,18 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+public class EnemyJudge_Move : EnemyJudge_isAttack {
 
-public class EnemyJudge_Move : EnemyJudge_isAttack
-{
-    public override void Judge()
-    {
-        // UŒ‚ƒ`ƒFƒbƒN
+    public override void Judge() {
+        // æ”»æ’ƒãƒã‚§ãƒƒã‚¯
         base.Judge();
 
-        // UŒ‚‚Å‚«‚»‚¤‚É‚È‚¢‚È‚çˆÚ“®‚·‚é
+        // æ”»æ’ƒã§ããã†ã«ãªã„ãªã‚‰ç§»å‹•ã™ã‚‹
 
-        // ‚Æ‚è‚ ‚¦‚¸‰½‚à‚µ‚È‚¢
+        // ã¨ã‚Šã‚ãˆãšä½•ã‚‚ã—ãªã„
 
-        // s“®—\–ñ
+        // è¡Œå‹•äºˆç´„
     }
 }

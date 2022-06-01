@@ -11,25 +11,25 @@ public class EnemyJudge_isAttack : IEnemyJudge
     [SerializeField] string player_name;
     public override void Judge()
     {
-        // —×ÚƒIƒuƒWƒFƒNƒg‚ğæ“¾‚·‚éƒŠƒXƒg
+        // éš£æ¥ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å–å¾—ã™ã‚‹ãƒªã‚¹ãƒˆ
         List<Transform> neighbor = new List<Transform>();
 
-        // ‘Š‘Î“I‚ÈˆÊ’u‚Ìƒ}ƒbƒvî•ñ‚ğæ“¾‚·‚éƒ‰ƒ€ƒ_®
+        // ç›¸å¯¾çš„ãªä½ç½®ã®ãƒãƒƒãƒ—æƒ…å ±ã‚’å–å¾—ã™ã‚‹ãƒ©ãƒ ãƒ€å¼
         Map_Func obj = (delta_x, delta_y) => map.dynamic_object_map[index_position.index.x + delta_x, index_position.index.y + delta_y];
 
-        // ‚S•û‚Ì—×Ú‚µ‚½ƒIƒuƒWƒFƒNƒg‚ğæ“¾
+        // ï¼”æ–¹ã®éš£æ¥ã—ãŸã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å–å¾—
         neighbor.Add(obj(-1, 0));
         neighbor.Add(obj(+1, 0));
         neighbor.Add(obj(0, -1));
         neighbor.Add(obj(0, +1));
 
-        // æ“¾‚µ‚½ƒIƒuƒWƒFƒNƒg‚©‚çƒvƒŒƒCƒ„[‚ğ’Tõ
-        // ƒvƒŒƒCƒ„[‚Ì”»•Ê•û–@‚Ítransform.name‚Ìˆê’v
+        // å–å¾—ã—ãŸã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’æ¢ç´¢
+        // ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®åˆ¤åˆ¥æ–¹æ³•ã¯transform.nameã®ä¸€è‡´
         foreach (var w in neighbor)
         {
             if (w.name == player_name)
-            {
-                // ƒvƒŒƒCƒ„[‚ğŒ©‚Â‚¯‚½‚È‚çUŒ‚—\–ñ
+            {      
+                // ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’è¦‹ã¤ã‘ãŸãªã‚‰æ”»æ’ƒäºˆç´„
 
                 return;
             }
