@@ -2092,6 +2092,7 @@ GameObject:
   - component: {fileID: 4579797161966893410}
   - component: {fileID: 1842040899363374919}
   - component: {fileID: 9085101927877974724}
+  - component: {fileID: 2106894984}
   - component: {fileID: 1956103794611582621}
   - component: {fileID: 6788979228463796935}
   - component: {fileID: 2191036159517267705}
@@ -2153,6 +2154,21 @@ MonoBehaviour:
   turn_limit: 9
   statemachine: {fileID: 4579797161966893410}
   past_state: 0
+--- !u!114 &2106894984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106894980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22e537631865bf4c8146c53507bf7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack_controller: {fileID: 3415187823079119329}
+  attack_script: {fileID: 3415187823079119330}
+  stateMachine: {fileID: 4579797161966893410}
 --- !u!1 &377434368243886065
 GameObject:
   m_ObjectHideFlags: 0
@@ -2597,6 +2613,7 @@ MonoBehaviour:
   move_script: {fileID: 7390383271114264156}
   attack_script: {fileID: 3415187823079119330}
   stateMachine: {fileID: 4579797161966893410}
+  turn_counter: {fileID: 2106894983}
 --- !u!114 &3415187823079119330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2609,6 +2626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54aac02abbc9f4648b2d1d822309e04d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  direction: 0
 --- !u!114 &3415187823079119331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2667,6 +2685,7 @@ MonoBehaviour:
   state_data: 0
   input_check_script:
   - {fileID: 1956103794611582621}
+  - {fileID: 2106894984}
   player_act_script:
   - {fileID: 3415187823079119329}
   enemy_judge_script:
