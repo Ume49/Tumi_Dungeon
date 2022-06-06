@@ -9,7 +9,10 @@ public class Turn_Counter : MonoBehaviour
     [SerializeField] Process_StateMachine statemachine;
     [SerializeField] Process_StateMachine.State past_state;
 
-    public void turn_decrement() {
-        turn_limit--;
+
+    public static Turn_Counter operator--(Turn_Counter p) {
+        p.turn_limit--;
+        
+        return p;
     }
 }

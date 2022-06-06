@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class EnemyAction_Operator : MonoBehaviour {
     public Queue<IAction> actions;
-
-    [SerializeField] private IAction current_action;
+    private IAction current_action;
     [SerializeField] private Process_StateMachine state;
 
     private void Awake() {
@@ -14,7 +13,8 @@ public class EnemyAction_Operator : MonoBehaviour {
     private void OnEnable() {
         // キューに中身が最初からない場合はステートを変更して処理をスキップ
         if (actions.Count <= 0) {
-            state.state = Process_StateMachine.State.Input_Check;
+            // ステートを次のものへ
+            state++;
             return;
         }
 
@@ -33,7 +33,7 @@ public class EnemyAction_Operator : MonoBehaviour {
             }
             else {
                 // 現在の処理が終了した時点で、全ての処理が終了している場合はステートを変更
-                state.state = Process_StateMachine.State.Input_Check;
+                state++;
             }
         }
     }

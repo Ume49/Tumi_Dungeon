@@ -8,7 +8,9 @@ public class Process_StateMachine : MonoBehaviour {
         Input_Check,    // 入力確認
         Player_Act,     // プレイヤーキャラの行動
         Enemy_Judge,    // エネミーの行動決定
-        Enemy_Act       // エネミーの行動
+        Enemy_Act,      // エネミーの行動
+        Turn_End,       // ターン終了時処理  
+        Count           // 末尾
     }
 
     [SerializeField] private State state_data;
@@ -25,6 +27,8 @@ public class Process_StateMachine : MonoBehaviour {
 
     [SerializeField]
     private List<MonoBehaviour> enemy_act_script;
+    [SerializeField]
+    List<MonoBehaviour> turn_end_script;
 
     public State state {
         get {
@@ -35,6 +39,20 @@ public class Process_StateMachine : MonoBehaviour {
 
             Switch();
         }
+    }
+
+    public static Process_StateMachine operator ++(Process_StateMachine p) {
+        // 次のステートをintで計算
+        var state_int = (int)p.state_data;
+        state_int = (++state_int) % (int)State.Count;
+
+        // 型を戻して代入
+        p.state_data = (State)state_int;
+
+        // 変更を反映
+        p.Switch();
+
+        return p;
     }
 
     private void Start() {
@@ -51,6 +69,7 @@ public class Process_StateMachine : MonoBehaviour {
         all_disenable(player_act_script);
         all_disenable(enemy_judge_script);
         all_disenable(enemy_act_script);
+        all_disenable(turn_end_script);
 
         // 現在のステートと対応するものだけ有効化
         switch (state_data) {
@@ -68,6 +87,9 @@ public class Process_StateMachine : MonoBehaviour {
 
             case State.Enemy_Act:
                 enemy_act_script.ForEach(x => x.enabled = true);
+                break;
+            case State.Turn_End:
+                turn_end_script.ForEach(x => x.enabled = true);
                 break;
         }
     }

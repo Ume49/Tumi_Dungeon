@@ -36,12 +36,13 @@ public class Player_Action_Controller : MonoBehaviour {
 
         // 今回ステートでの処理が終了したら追加処理
         if (action_result) {
-            // プレイヤーの一連の処理が終わったのでエネミーの処理に入る
-            stateMachine.state = Process_StateMachine.State.Enemy_Judge;
-
-            // なんかしら行動をしていた場合は残り手数を現象させる
-            if (current_action != Action.CannotMove) {
-                turn_counter.turn_decrement(); 
+            if (current_action == Action.CannotMove) {
+                // 動けなかった時は入力に戻る
+                stateMachine.state = Process_StateMachine.State.Input_Check;
+            }
+            else {
+                // プレイヤーの一連の処理が終わったのでエネミーの処理に入る
+                stateMachine++;
             }
         }
     }
