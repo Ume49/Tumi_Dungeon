@@ -46,4 +46,9 @@ public class Player_Action_Controller : MonoBehaviour {
             }
         }
     }
+
+    private void Reset() {
+        stateMachine = Resources.FindObjectsOfTypeAll<Process_StateMachine>()[0];
+        turn_counter = Resources.FindObjectsOfTypeAll<Turn_Counter>()[0];
+    }
 }

@@ -21,4 +21,8 @@ public class Posiition_Trimmer : MonoBehaviour
 
         gameObject.transform.position = new Vector3(seikei(pos.x), seikei(pos.y), seikei(pos.z));
     }
+
+    private void Start() {
+        Destroy(this);
+    }
 }

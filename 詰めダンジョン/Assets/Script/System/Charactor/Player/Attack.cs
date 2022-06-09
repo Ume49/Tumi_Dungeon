@@ -21,16 +21,21 @@ public class Attack : IAction {
         // 方向から座標を計算
         Vector2Int target_position = current_index_position.index + Direciton_Table.Direction_To_Table(current_direction);
 
-        // 座標から攻撃を与えるオブジェクトを取得
-        Transform target_transform = map.dynamic_object_map[target_position.x, target_position.y];
+        try {
+            // 座標から攻撃を与えるオブジェクトを取得
+            Transform target_transform = map.dynamic_object_map[target_position.x, target_position.y];
 
-        // null避け
-        if (target_transform == null) { Debug.LogError("攻撃対象がいません！"); }
+            var target_param = target_transform.GetComponent<Charactor_Paramater>();
 
-        var target_param = target_transform.GetComponent<Charactor_Paramater>();
-
-        // ダメージを与える
-        target_param.hp -= param.attak;
+            // ダメージを与える
+            target_param.Damage(param.attak);
+        }
+        catch (System.IndexOutOfRangeException) {
+            // 何もしない
+        }
+        catch (System.NullReferenceException) {
+            // 何もしない
+        }
     }
 
     private void Reset() {
