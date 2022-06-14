@@ -2,15 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Œü‚¢‚Ä‚¢‚é•ûŒü
+// å‘ã„ã¦ã„ã‚‹æ–¹å‘
 public class Front : MonoBehaviour
 {
     public Direction direction;
-    // Œü‚«‚Ì•ÏX
+
+    [SerializeField] Vector3 up_rotation;
+    [SerializeField] Vector3 down_rotation;
+    [SerializeField] Vector3 right_rotation;
+    [SerializeField] Vector3 left_rotation;
+    // å‘ãã®å¤‰æ›´
     public void Change_Direction(Direction d) {
         direction = d;
 
-        // ƒAƒ^ƒbƒ`‚³‚ê‚Ä‚¢‚éƒIƒuƒWƒFƒNƒg‚ÌRotation‚à‘Î‰‚·‚é‚à‚Ì‚É•ÏX‚·‚é
+        // ã‚¢ã‚¿ãƒƒãƒã•ã‚Œã¦ã„ã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®Rotationã‚‚å¯¾å¿œã™ã‚‹ã‚‚ã®ã«å¤‰æ›´ã™ã‚‹
+        Quaternion rotate=new Quaternion();
 
+        switch(d){
+            case Direction.UP:
+                rotate=Quaternion.Euler(up_rotation);
+                break;
+            case Direction.DOWN:
+                rotate=Quaternion.Euler(down_rotation);
+                break;
+            case Direction.RIGHT:
+                rotate=Quaternion.Euler(right_rotation);
+                break;    
+            case Direction.LEFT:
+                rotate=Quaternion.Euler(left_rotation);
+                break;
+        }
+
+        transform.rotation=rotate;
     }
 }

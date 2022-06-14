@@ -9,19 +9,19 @@ public class Direction_Changer : MonoBehaviour {
         Debug.Log(input.x.ToString() + ", " + input.y.ToString());
 
         if (input.x > 0.0f) {
-            player_front.direction = Direction.RIGHT;
+            player_front.Change_Direction(Direction.RIGHT);
         }
         else
         if (input.x < 0.0f) {
-            player_front.direction = Direction.LEFT;
+            player_front.Change_Direction(Direction.LEFT);
         }
         else
         if (input.y > 0.0f) {
-            player_front.direction = Direction.UP;
+            player_front.Change_Direction(Direction.UP);
         }
         else
         if (input.y < 0.0f) {
-            player_front.direction = Direction.DOWN;
+            player_front.Change_Direction(Direction.DOWN);
         }
     }
 }

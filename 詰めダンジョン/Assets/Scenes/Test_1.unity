@@ -4382,6 +4382,22 @@ PrefabInstance:
       propertyPath: map
       value: 
       objectReference: {fileID: 1842040899363374919}
+    - target: {fileID: 5390646917908068852, guid: 46a65ece1a6dd054ea536e6da16b0f37, type: 3}
+      propertyPath: direction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390646917908068852, guid: 46a65ece1a6dd054ea536e6da16b0f37, type: 3}
+      propertyPath: down_rotation.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390646917908068852, guid: 46a65ece1a6dd054ea536e6da16b0f37, type: 3}
+      propertyPath: left_rotation.y
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390646917908068852, guid: 46a65ece1a6dd054ea536e6da16b0f37, type: 3}
+      propertyPath: right_rotation.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 5390646917908068853, guid: 46a65ece1a6dd054ea536e6da16b0f37, type: 3}
       propertyPath: map
       value: 
