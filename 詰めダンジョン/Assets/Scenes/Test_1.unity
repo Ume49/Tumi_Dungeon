@@ -1387,6 +1387,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 733934046}
+  - component: {fileID: 733934047}
   m_Layer: 5
   m_Name: Map
   m_TagString: Untagged
@@ -1419,6 +1420,36 @@ RectTransform:
   m_AnchoredPosition: {x: -142, y: 42.801}
   m_SizeDelta: {x: 570, y: 353.399}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &733934047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733934045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14a3664219ba9c148be7e56cf7f3096a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  field_map_gameobject: {fileID: 1458834088}
+  static_map_gameobject: {fileID: 748287924}
+  dynamic_map_gameobject: {fileID: 1195716344}
+  startup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 733934047}
+        m_TargetAssemblyTypeName: Map_Changer, Assembly-CSharp
+        m_MethodName: Dym_Map_On
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &748287924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,7 +1462,7 @@ GameObject:
   - component: {fileID: 748287927}
   - component: {fileID: 748287926}
   m_Layer: 5
-  m_Name: Header (1)
+  m_Name: Header_Static
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1603,11 +1634,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 809552286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ad02fb7b619c81448cecb92002cdc1c, type: 3}
+  m_Script: {fileID: 11500000, guid: 3736a331d3e909042aa729d025e3f26e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  map: {fileID: 1842040899363374919}
   textbox: {fileID: 809552289}
+  map: {fileID: 1842040899363374919}
 --- !u!114 &809552289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1978,7 +2009,7 @@ GameObject:
   - component: {fileID: 1195716347}
   - component: {fileID: 1195716346}
   m_Layer: 5
-  m_Name: Header (2)
+  m_Name: Header_Dynamic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2631,7 +2662,7 @@ GameObject:
   - component: {fileID: 1458834091}
   - component: {fileID: 1458834090}
   m_Layer: 5
-  m_Name: Header
+  m_Name: Header_Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2798,7 +2829,7 @@ GameObject:
   - component: {fileID: 1492031330}
   - component: {fileID: 1492031329}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button_Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2867,7 +2898,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1492031330}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 733934047}
+        m_TargetAssemblyTypeName: Map_Changer, Assembly-CSharp
+        m_MethodName: Field_On
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1492031330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3842,7 +3885,7 @@ GameObject:
   - component: {fileID: 1878686597}
   - component: {fileID: 1878686596}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Button_Static
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3911,7 +3954,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1878686597}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 733934047}
+        m_TargetAssemblyTypeName: Map_Changer, Assembly-CSharp
+        m_MethodName: Stc_Map_On
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1878686597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4252,7 +4307,7 @@ GameObject:
   - component: {fileID: 2070655348}
   - component: {fileID: 2070655347}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Button_Dynamic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4321,7 +4376,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2070655348}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 733934047}
+        m_TargetAssemblyTypeName: Map_Changer, Assembly-CSharp
+        m_MethodName: Dym_Map_On
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2070655348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4390,6 +4457,7 @@ GameObject:
   - component: {fileID: 2106894987}
   - component: {fileID: 2106894988}
   - component: {fileID: 2106894989}
+  - component: {fileID: 2106894991}
   m_Layer: 0
   m_Name: System
   m_TagString: Untagged
@@ -4544,6 +4612,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player_front: {fileID: 3415187823079119333}
+--- !u!114 &2106894991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106894980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1fefd7358618974eb52bdaa47eecff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  histories: []
 --- !u!1001 &2108867080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5084,7 +5165,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8879131207059253106}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4, y: 0, z: 0}
+  m_LocalPosition: {x: 4, y: 0.5, z: 0}
   m_LocalScale: {x: 0.3, y: 2, z: 0.3}
   m_Children: []
   m_Father: {fileID: 2106894981}

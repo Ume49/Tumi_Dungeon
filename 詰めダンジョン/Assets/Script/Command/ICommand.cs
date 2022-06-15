@@ -2,15 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class ICommand : MonoBehaviour
+public class ICommand
 {
-    // Ž¯•Ê—pID
-    public enum Command_ID
-    {
-        Move,
+    public enum ID{
         Attack,
-        PickUp_Item
+        Move
     }
-
-    Command_ID command_id;
 }

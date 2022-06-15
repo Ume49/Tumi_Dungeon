@@ -4,16 +4,16 @@ public class Under_Checker : MonoBehaviour {
     [SerializeField] private MAP map;
     [SerializeField] private Now_Position_onMap index_position;
 
-    // ‘«Œ³Šm”F
+    // è¶³å…ƒç¢ºèª
     public Static_Object_Tag.Kind Check() {
 
-        // ‘«Œ³‚ÌƒIƒuƒWƒFƒNƒg‚ÌTransform‚ğæ“¾
+        // è¶³å…ƒã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®Transformã‚’å–å¾—
         var under_obj_transform = map.static_object_map[index_position.index.x, index_position.index.y];
 
-        // ‹ó‚È‚çNull‚ğ•Ô‚·
+        // ç©ºãªã‚‰Nullã‚’è¿”ã™
         if (under_obj_transform == null) return Static_Object_Tag.Kind.Null;
 
-        // ‚±‚±‚É“’B‚Å‚«‚Ä‚é“_‚Å’†g‚ª‚ ‚é‚Ì‚ÅA‚»‚ê‚ğæ“¾‚µ‚Ä•Ô‚·
+        // ã“ã“ã«åˆ°é”ã§ãã¦ã‚‹æ™‚ç‚¹ã§ä¸­èº«ãŒã‚ã‚‹ã®ã§ã€ãã‚Œã‚’å–å¾—ã—ã¦è¿”ã™
         return under_obj_transform.GetComponent<Static_Object_Tag>().value;
     }
 
