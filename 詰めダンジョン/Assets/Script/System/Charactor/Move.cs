@@ -11,7 +11,7 @@ using UnityEngine;
 public class Move : IAction {
     [SerializeField] private IndexToPos indexToPos;
     [SerializeField] private DynamicMap_Move map_mover;
-    [SerializeField] private Now_Position_onMap player_index_pos;
+    [SerializeField] private CurrentPosition_OnMap player_index_pos;
     [SerializeField] private float speed;
     [SerializeField] private Vector3 destination;
 
@@ -34,7 +34,7 @@ public class Move : IAction {
     }
 
     private void Reset() {
-        player_index_pos = GetComponent<Now_Position_onMap>();
+        player_index_pos = GetComponent<CurrentPosition_OnMap>();
 
         indexToPos = Resources.FindObjectsOfTypeAll<IndexToPos>()[0];
         map_mover = Resources.FindObjectsOfTypeAll<DynamicMap_Move>()[0];

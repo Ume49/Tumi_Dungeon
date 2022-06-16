@@ -1,11 +1,11 @@
 using UnityEngine;
 
 public class Attack : IAction {
-    [SerializeField] private Direction current_direction;
-    [SerializeField] private Charactor_Paramater param;
-    [SerializeField] private Now_Position_onMap current_index_position;
+    [SerializeField] Direction current_direction;
+    [SerializeField] Charactor_Paramater param;
+    [SerializeField] CurrentPosition_OnMap current_index_position;
     [SerializeField] MAP map;
-
+    
     public void SetAttack_Info(Direction d) {
         current_direction = d;
 
@@ -40,7 +40,7 @@ public class Attack : IAction {
 
     private void Reset() {
         param = GetComponent<Charactor_Paramater>();
-        current_index_position = GetComponent<Now_Position_onMap>();
+        current_index_position = GetComponent<CurrentPosition_OnMap>();
 
         map = Resources.FindObjectsOfTypeAll<MAP>()[0];
     }

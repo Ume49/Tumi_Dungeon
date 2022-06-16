@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Under_Checker : MonoBehaviour {
     [SerializeField] private MAP map;
-    [SerializeField] private Now_Position_onMap index_position;
+    [SerializeField] private CurrentPosition_OnMap index_position;
 
     // 足元確認
     public Static_Object_Tag.Kind Check() {
@@ -20,6 +20,6 @@ public class Under_Checker : MonoBehaviour {
     private void Reset() {
         map = Resources.FindObjectsOfTypeAll<MAP>()[0];
 
-        index_position = GetComponent<Now_Position_onMap>();
+        index_position = GetComponent<CurrentPosition_OnMap>();
     }
 }

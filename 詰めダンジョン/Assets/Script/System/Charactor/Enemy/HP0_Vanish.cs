@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class HP0_Vanish : MonoBehaviour {
     [SerializeField] private Charactor_Paramater param;
-    [SerializeField] Now_Position_onMap position;
+    [SerializeField] CurrentPosition_OnMap position;
     [SerializeField] MAP map;
 
     private void Reset() {
         param = GetComponent<Charactor_Paramater>();
-        position = GetComponent<Now_Position_onMap>();
+        position = GetComponent<CurrentPosition_OnMap>();
         map = Resources.FindObjectsOfTypeAll<MAP>()[0];
     }
 

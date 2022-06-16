@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Player_Action_Controller : MonoBehaviour {
 
@@ -10,11 +11,38 @@ public class Player_Action_Controller : MonoBehaviour {
 
     public Action current_action;
 
+    // 多分1個しか入らないが、Nullを表現したいのでStack
+    public Stack<ICommand> commands;
+    public ICommand current_command;
+
     [SerializeField] private IAction cannot_move_script;
     [SerializeField] private IAction move_script;
     [SerializeField] private IAction attack_script;
     [SerializeField] private Process_StateMachine stateMachine;
     [SerializeField] private Turn_Counter turn_counter;
+
+    void Awake()
+    {
+        // Unityがシリアライズしてくれないので明示的にインスタンスを作成
+        commands=new Stack<ICommand>();
+    }
+
+    void OnEnable()
+    {
+        if(commands.Count<=0){
+            stateMachine++;
+
+            // そもそもInput_Checkを通した上でプレイヤーにコマンドが投げられていないという状況はバグくさいので、エラーログで通知
+            #if UNITY_EDITOR
+                Debug.LogError("プレイヤーのコマンドがNullです。"+"\nattatched object:"+this.gameObject.name);
+            #endif
+
+            return;
+        }
+
+        current_command=commands.Pop();
+        
+    }
 
     private void Update() {
         bool action_result = false;

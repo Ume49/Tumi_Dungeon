@@ -1,14 +1,24 @@
 using UnityEngine;
 
 public class Move_Check : MonoBehaviour {
-    [SerializeField] private Now_Position_onMap player_pos_index;
-    [SerializeField] private Move player_move_script;
-    [SerializeField] private Movable_Checker movable_Checker;
-    [SerializeField] private Player_Action_Controller controller;
-    [SerializeField] private IndexToPos indexToPos;
-    [SerializeField] private Process_StateMachine stateMachine;
+    [SerializeField] Transform player;
+    [SerializeField] Movable_Checker movable_Checker;
+    [SerializeField] IndexToPos indexToPos;
+    [SerializeField] Process_StateMachine stateMachine;
 
-    private void Update() {
+    // playerから引っ張ってこれるやつら
+    CurrentPosition_OnMap player_pos_index;
+    Move player_move_script;
+    Player_Action_Controller controller;
+
+    void Awake()
+    {
+        player_move_script = player.GetComponent<Move>();
+        player_pos_index   = player.GetComponent<CurrentPosition_OnMap>();
+        controller         = player.GetComponent<Player_Action_Controller>();
+    }
+
+    void Update() {
         var input_result = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
         // 何もないなら以降の処理はスキップ
@@ -43,13 +53,17 @@ public class Move_Check : MonoBehaviour {
         Vector2Int current_destination = index_vec + player_pos_index.index;
 
         // 目的地が侵入可能かどうかチェックして、コントローラーに行動予約
-        if (movable_Checker.Check(current_destination)) {   // 行ける場合
+        if (movable_Checker.Check(current_destination)) {
+        // 行ける場合
             controller.current_action = Player_Action_Controller.Action.Move;
+
+            //controller.commands.Push(new Command_Move(current_destination, ));
 
             // ワールド座標の目的地をセット
             player_move_script.SetDestination(current_destination);
         }
-        else {   // 行けない場合
+        else {                                                  
+        // 行けない場合
             controller.current_action = Player_Action_Controller.Action.CannotMove;
         }
 

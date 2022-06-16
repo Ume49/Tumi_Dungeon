@@ -4,5 +4,11 @@ using UnityEngine;
 
 public class Command_Move : ICommand
 {
-    public Direction direction;
+    public Vector2Int destination_onMap;
+    public Transform move_charactor;
+
+    public Command_Move(Vector2Int destination, Transform move_chara){
+        destination_onMap=destination;
+        move_charactor=move_chara;
+    }
 }

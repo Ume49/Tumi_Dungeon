@@ -7,19 +7,29 @@ public class History_Stocker : MonoBehaviour
 {
     List<OneTurnHistory> histories;
 
-    // このターンの履歴を記録する箱を作る
-    public void Make_NewTurn_History()
+    void Awake()
     {
-        histories.Add(new OneTurnHistory());
-    }
-
-    public void Add(IHistory new_history)
-    {
-        histories[histories.Count - 1].Add(new_history);
+        // Unityの方でシリアライズされないので明示的にインスタンス作成
+        histories=new List<OneTurnHistory>();
     }
 
     void Start()
     {
         Make_NewTurn_History();
+    }
+
+    // このターンの履歴を記録する箱を作る
+    public void Make_NewTurn_History()
+    {
+        histories.Add(new OneTurnHistory());
+
+        #if UNITY_EDITOR
+            Debug.Log("OneTurnHistroy : "+histories.Count);
+        #endif
+    }
+
+    public void Add(IHistory new_history)
+    {
+        histories[histories.Count - 1].Add(new_history);
     }
 }

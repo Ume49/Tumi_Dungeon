@@ -13,22 +13,18 @@ public class Process_StateMachine : MonoBehaviour {
         Count           // 末尾
     }
 
-    [SerializeField] private State state_data;
+    [SerializeField] State state_data;
+    [SerializeField] History_Stocker history; 
 
-    [Header("ステートによって有効化状態を管理するスクリプト")]
-    [SerializeField]
-    private List<MonoBehaviour> input_check_script;
+    // 対応するステートのときのみ有効化されていて欲しいスクリプトたち
+    [SerializeField] List<MonoBehaviour> input_check_script;
 
-    [SerializeField]
-    private List<MonoBehaviour> player_act_script;
+    [SerializeField] List<MonoBehaviour> player_act_script;
 
-    [SerializeField]
-    private List<MonoBehaviour> enemy_judge_script;
+    [SerializeField] List<MonoBehaviour> enemy_judge_script;
 
-    [SerializeField]
-    private List<MonoBehaviour> enemy_act_script;
-    [SerializeField]
-    List<MonoBehaviour> turn_end_script;
+    [SerializeField] List<MonoBehaviour> enemy_act_script;
+    [SerializeField] List<MonoBehaviour> turn_end_script;
 
     public State state {
         get {
@@ -71,6 +67,10 @@ public class Process_StateMachine : MonoBehaviour {
         all_disenable(enemy_act_script);
         all_disenable(turn_end_script);
 
+
+        // ターン終了->開始の瞬間を捉えたいので過去のステートを保存
+        var past_state=state_data;
+
         // 現在のステートと対応するものだけ有効化
         switch (state_data) {
             case State.Input_Check:
@@ -91,6 +91,11 @@ public class Process_StateMachine : MonoBehaviour {
             case State.Turn_End:
                 turn_end_script.ForEach(x => x.enabled = true);
                 break;
+        }
+
+        // ターンの最初を観測したら、このターンの履歴を入れる枠を作成
+        if(past_state==State.Turn_End && state_data==State.Input_Check){
+            history.Make_NewTurn_History();
         }
     }
 }

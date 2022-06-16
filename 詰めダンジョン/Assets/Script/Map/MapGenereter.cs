@@ -46,7 +46,7 @@ public class MapGenereter : MonoBehaviour
             // マップ配列を初期化
 
             int height = (int)((z.max - z.min) / distance) + 1;
-            int width = (int)((x.max - x.min) / distance) + 1;
+            int width  = (int)((x.max - x.min) / distance) + 1;
 
             map_class.collider_map = new bool[width, height];
 
@@ -96,16 +96,20 @@ public class MapGenereter : MonoBehaviour
                 map[index.x, index.y] = w;
 
                 // 現在位置をオブジェクトに覚えておいてもらう
-                w.GetComponent<Now_Position_onMap>().index = index;
+                w.GetComponent<CurrentPosition_OnMap>().index = index;
             }
 
         };
 
-        // 動的オブジェクトマップを作成
-        serch_and_assign(dynamic_object_tag, ref map_class.dynamic_object_map);
+        
+        serch_and_assign(dynamic_object_tag, ref map_class.dynamic_object_map);     // 動的オブジェクトマップを作成
+        serch_and_assign(static_object_tag,  ref map_class.static_object_map );     // 静的オブジェクトマップを作成
+    }
 
-        // 静的オブジェクトマップを作成
-        serch_and_assign(static_object_tag, ref map_class.static_object_map);
+    void Start()
+    {
+        // 用済みであり、メモリが無駄なだけなので削除
+        Destroy(this);
     }
 }
 
