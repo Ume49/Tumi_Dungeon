@@ -12,7 +12,7 @@ public class MapGenereter : MonoBehaviour
     [SerializeField] IndexToPos index_to_pos;
     [SerializeField] PosToIndex pos_to_index;
 
-    [Header("設定")]
+    // 識別用のタグ
     [SerializeField] string field_tag;
     [SerializeField] string dynamic_object_tag;
     [SerializeField] string static_object_tag;
@@ -43,15 +43,15 @@ public class MapGenereter : MonoBehaviour
             // マス目の単位を取得
             var distance = map_class.masume_distance;
 
-            // マップ配列を初期化
-
+            // マップの大きさを計算
             int height = (int)((z.max - z.min) / distance) + 1;
             int width  = (int)((x.max - x.min) / distance) + 1;
 
+            // マップを初期化
             map_class.collider_map = new bool[width, height];
 
             // マップに基準点をセット
-            map_class.standerd_position = new Vector3(x.min, 0.0f, z.max);
+            map_class.standerd_position = new Vector3(x.min, 0.0f, z.min);
 
             // 中身をセット
             for (var ix = 0; ix < width; ix++)
@@ -72,7 +72,6 @@ public class MapGenereter : MonoBehaviour
 
                     map_class.collider_map[ix, iy] = result;
                 }
-
             }
         }
 

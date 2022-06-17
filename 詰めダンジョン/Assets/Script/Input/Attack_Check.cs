@@ -1,21 +1,29 @@
 using UnityEngine;
 
 public class Attack_Check : MonoBehaviour {
-    [SerializeField] private Player_Action_Controller attack_controller;
-    [SerializeField] private Attack attack_script;
-    [SerializeField] private Front player_front;
-    [SerializeField] private Process_StateMachine stateMachine;
+    [SerializeField] Transform player;
+    [SerializeField] Process_StateMachine stateMachine;
+
+    // ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã¨ã®ç´ã¥ã‘ã§å–å¾—ã§ãã‚‹ã‚„ã¤ã‚‰
+    Player_Action_Controller command_controller;
+    Attack attack_script;
+    Front player_front;
+    CurrentPosition_OnMap player_pos;
+
+    void Awake() {
+        command_controller = player.GetComponent<Player_Action_Controller>();
+        attack_script      = player.GetComponent<Attack>();
+        player_front       = player.GetComponent<Front>();
+        player_pos         = player.GetComponent<CurrentPosition_OnMap>();
+    }
 
     private void Update() {
         if (Input.GetButtonDown("A")) {
-            // UŒ‚—\–ñ
-            attack_controller.current_action = Player_Action_Controller.Action.Attack;
+            // æ”»æ’ƒã‚³ãƒãƒ³ãƒ‰ä½œæˆ
+            command_controller.command=new Command_Attack(player, player_front.direction);
 
-            // UŒ‚•ûŒü‚ğŒˆ’è‚µ‚Ä‚¨‚­
-            attack_script.SetAttack_Info(player_front.direction);
-
-            // ƒXƒe[ƒg•ÏX
-            stateMachine.state = Process_StateMachine.State.Player_Act;
+            // æ¬¡ã®ã‚¹ãƒ†ãƒ¼ãƒˆã¸é·ç§»
+            stateMachine.state++;
         }
     }
 }

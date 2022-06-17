@@ -11,11 +11,11 @@ public class IndexToPos : MonoBehaviour
     // 座標の計算
     public Vector3 Get(int x, int y)
     {
-        return map.standerd_position + new Vector3(map.masume_distance * x, 0.0f, map.masume_distance * (-y));
+        return map.standerd_position + new Vector3(map.masume_distance * x, 0.0f, map.masume_distance * y);
     }
 
     public Vector3 Get(Vector2Int index)
     {
-        return map.standerd_position + new Vector3(index.x * map.masume_distance, 0.0f, map.masume_distance * (-index.y));
+        return map.standerd_position + new Vector3(index.x * map.masume_distance, 0.0f, map.masume_distance * index.y);
     }
 }

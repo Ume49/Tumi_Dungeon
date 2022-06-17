@@ -20,7 +20,7 @@ public class PosToIndex : MonoBehaviour
 
         // x,z成分を基準の長さで除算してインデックスを計算
         int x = (int)(delta.x / distance);
-        int y = -(int)(delta.z / distance);
+        int y = (int)(delta.z / distance);
 
         return new Vector2Int(x, y);
     }

@@ -14,7 +14,8 @@ public class Dyn_Map_Display : MonoBehaviour
     {
         textbox.text = "";
 
-        foreach (var y in Enumerable.Range(0, map.dynamic_object_map.GetLength(1)))
+        // Col_Map_Dispと同じ実装
+        for (var y = map.dynamic_object_map.GetLength(1)-1; y>=0; y--)
         {
             foreach (var x in Enumerable.Range(0, map.dynamic_object_map.GetLength(0)))
             {

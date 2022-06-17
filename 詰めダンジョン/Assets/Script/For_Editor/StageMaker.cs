@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
+// 自分が置かれている場所を0,0としていい感じにマップを生成する
 public class StageMaker : MonoBehaviour
 {
     [SerializeField] MAP map;
@@ -27,10 +28,14 @@ public class StageMaker : MonoBehaviour
         // リセット
         DestoryFieldChildren();
 
+        // マスを配置する上での基準点を決定
+        // マップで言うところの[0,0]に相当する場所
+        Vector3 standerd_pos=transform.position;
+
         // とりあえず配置するマス目を生成
-        foreach (var y in Enumerable.Range(0, height))
+        foreach (var x in Enumerable.Range(0, width))
         {
-            foreach (var x in Enumerable.Range(0, width))
+            foreach (var y in Enumerable.Range(0, height))
             {
                 // 設定した確率に従ってスキップ
                 if (Random.Range(0.0f, 1.0f) >= make_rate) continue;
@@ -39,7 +44,7 @@ public class StageMaker : MonoBehaviour
                 Vector3 current_pos = new Vector3(x * map.masume_distance, 0.0f, y * map.masume_distance);
 
                 // 基準の座標ベクトルと合成してワールド座標にする
-                current_pos += map.standerd_position;
+                current_pos += standerd_pos;
 
                 // 生成
                 GameObject instance = UnityEditor.PrefabUtility.InstantiatePrefab(field_prefab, field_parent) as GameObject;

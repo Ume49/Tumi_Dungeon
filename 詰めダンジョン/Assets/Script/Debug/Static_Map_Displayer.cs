@@ -12,7 +12,8 @@ public class Static_Map_Displayer : MonoBehaviour
     {
         textbox.text = "";
 
-        foreach (var y in Enumerable.Range(0, map.static_object_map.GetLength(1)))
+        // Col_Map_Dispと同じ実装
+        for (var y = map.static_object_map.GetLength(1)-1; y>=0; y--)
         {
             foreach (var x in Enumerable.Range(0, map.static_object_map.GetLength(0)))
             {

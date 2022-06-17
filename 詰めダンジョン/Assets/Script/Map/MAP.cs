@@ -1,6 +1,8 @@
 using UnityEngine;
 
 // マップ情報
+// y軸↑
+// x軸→
 public class MAP : MonoBehaviour {
 
     // マス目の距離
