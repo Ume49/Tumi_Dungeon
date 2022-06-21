@@ -5,6 +5,7 @@ public class Attack : IAction {
     [SerializeField] Charactor_Paramater param;
     [SerializeField] CurrentPosition_OnMap current_index_position;
     [SerializeField] MAP map;
+    [SerializeField] Check_PositionInMap position_check;
     
     public void SetAttack_Info(Direction d) {
         current_direction = d;
@@ -17,31 +18,27 @@ public class Attack : IAction {
     }
 
     // 対象にダメージを与える処理
-    private void Damage() {
+    void Damage() {
         // 方向から座標を計算
         Vector2Int target_position = current_index_position.index + Direciton_Table.Direction_To_Table(current_direction);
 
-        try {
-            // 座標から攻撃を与えるオブジェクトを取得
-            Transform target_transform = map.dynamic_object_map[target_position.x, target_position.y];
+        // 範囲外参照ガード
+        if(position_check.DynamicObject_Map(target_position)) return;
 
-            var target_param = target_transform.GetComponent<Charactor_Paramater>();
+        // 座標から攻撃を与えるオブジェクトを取得
+        Transform target_transform = map.dynamic_object_map[target_position.x, target_position.y];
 
-            // ダメージを与える
-            target_param.Damage(param.attak);
-        }
-        catch (System.IndexOutOfRangeException) {
-            // 何もしない
-        }
-        catch (System.NullReferenceException) {
-            // 何もしない
-        }
+        var target_param = target_transform.GetComponent<Charactor_Paramater>();
+
+        // ダメージを与える
+        target_param.Damage(param.attak);
     }
 
-    private void Reset() {
-        param = GetComponent<Charactor_Paramater>();
+    void Reset() {
+        param                  = GetComponent<Charactor_Paramater>();
         current_index_position = GetComponent<CurrentPosition_OnMap>();
 
-        map = Resources.FindObjectsOfTypeAll<MAP>()[0];
+        map                    = Resources.FindObjectsOfTypeAll<MAP>()[0];
+        position_check         = Resources.FindObjectsOfTypeAll<Check_PositionInMap>()[0];
     }
 }

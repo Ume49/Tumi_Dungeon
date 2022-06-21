@@ -52,6 +52,7 @@ public class Move_Check : MonoBehaviour {
         // 目的地が侵入可能かどうか 侵入不可ならスキップ
         if (movable_Checker.Check(current_destination)!=true) {
             // TODO: ビープ音を流すとか、専用の処理をする
+            Debug.Log("そっちには進めないよ！");
             return;
         }
 

@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
 public abstract class IHistory
 {
     // 中身が何なのか識別するID
@@ -14,5 +11,5 @@ public abstract class IHistory
         Deth
     }
 
-    ID id;
+    public ID id;
 }
