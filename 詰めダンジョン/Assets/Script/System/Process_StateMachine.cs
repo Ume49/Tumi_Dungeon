@@ -74,19 +74,27 @@ public class Process_StateMachine : MonoBehaviour {
         // 現在のステートと対応するものだけ有効化
         switch (state_data) {
             case State.Input_Check:
-                input_check_script.ForEach(x => x.enabled = true);
+                foreach(var w in input_check_script){
+                    w.enabled=true;
+                }
                 break;
 
             case State.Player_Act:
-                player_act_script.ForEach(x => x.enabled = true);
+                foreach(var w in player_act_script){
+                    w.enabled=true;
+                }
                 break;
 
             case State.Enemy_Judge:
-                enemy_judge_script.ForEach(x => x.enabled = true);
+                foreach(var w in enemy_judge_script){
+                    w.enabled=true;
+                }
                 break;
 
             case State.Enemy_Act:
-                enemy_act_script.ForEach(x => x.enabled = true);
+                foreach(var w in enemy_act_script){
+                    w.enabled=true;
+                }
                 break;
             case State.Turn_End:
                 turn_end_script.ForEach(x => x.enabled = true);

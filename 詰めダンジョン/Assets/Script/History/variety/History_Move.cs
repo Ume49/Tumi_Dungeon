@@ -16,5 +16,7 @@ public class History_Move : IHistory
         this.past_pos        = past_position;
         this.destination_pos = destination;
         this.move_charactor  = move_charactor;
+
+        base.id              = IHistory.ID.Move;
     }
 }

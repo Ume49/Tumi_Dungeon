@@ -13,5 +13,7 @@ public class History_Attack : IHistory
     public History_Attack(Transform damaged_charactor, int damage){
         this.damaged_charactor = damaged_charactor;
         this.damage            = damage;
+
+        base.id                = IHistory.ID.Attack;
     }
 }

@@ -6,7 +6,7 @@ public class Charactor_Paramater : MonoBehaviour {
     public int deffence;
     public int attak;
 
-    public void Damage(int atk) {
-        hp -= (atk - deffence);
+    public void Damage(int damage) {
+        hp -= damage;
     }
 }

@@ -29,10 +29,6 @@ public class History_Stocker : MonoBehaviour
     public void Make_NewTurn_History()
     {
         histories.Add(new OneTurnHistory());
-
-        #if UNITY_EDITOR
-            Debug.Log("OneTurnHistroy : "+histories.Count);
-        #endif
     }
 
     public void Add(IHistory new_history)

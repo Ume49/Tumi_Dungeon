@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7434682893911150703}
   - component: {fileID: 4726835210754031612}
+  - component: {fileID: 75159108680538240}
   m_Layer: 0
   m_Name: HP_Pannel
   m_TagString: Untagged
@@ -46,6 +47,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 4076206085544546567}
   hp_displayer: {fileID: 4076206085545620983}
+--- !u!114 &75159108680538240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398916427448849854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b634d0d52a2704f918b536f549d05c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4076206085544546563
 GameObject:
   m_ObjectHideFlags: 0
