@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyJudge_Wait : IEnemyJudge
+public class EnemyJudge_Wait : IEnemyJudgeComponent
 {
-    public override void Judge()
+    public override bool _judge()
     {
         // なにもしない
-        return;
+        return true;
     }
 }

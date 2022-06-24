@@ -39,8 +39,6 @@ public class Attack : IAction {
         // ダメージを与える
         target_param.Damage(damage);
 
-        Debug.Log("ダメージは"+damage);
-
         // 攻撃をしたので履歴を作成
         history.Add(new History_Attack(target_transform, damage));
     }

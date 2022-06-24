@@ -1,8 +1,9 @@
 using UnityEngine;
 
-public class Under_Checker : MonoBehaviour {
-    [SerializeField] private MAP map;
-    [SerializeField] private CurrentPosition_OnMap index_position;
+public class Under_Checker : MonoBehaviour, ISingletonAttach, IBroComponent_Attach
+{
+    [SerializeField] MAP map;
+    [SerializeField] CurrentPosition_OnMap index_position;
 
     // 足元確認
     public Static_Object_Tag.Kind Check() {
@@ -17,9 +18,11 @@ public class Under_Checker : MonoBehaviour {
         return under_obj_transform.GetComponent<Static_Object_Tag>().value;
     }
 
-    private void Reset() {
+    public void Singleton_Attach(){
         map = Resources.FindObjectsOfTypeAll<MAP>()[0];
+    }
 
+    public void Brother_Attach(){
         index_position = GetComponent<CurrentPosition_OnMap>();
     }
 }

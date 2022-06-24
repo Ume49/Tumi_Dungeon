@@ -96,8 +96,11 @@ public class Process_StateMachine : MonoBehaviour {
                     w.enabled=true;
                 }
                 break;
+                
             case State.Turn_End:
-                turn_end_script.ForEach(x => x.enabled = true);
+                foreach(var w in turn_end_script){
+                    w.enabled=true;
+                }
                 break;
         }
 

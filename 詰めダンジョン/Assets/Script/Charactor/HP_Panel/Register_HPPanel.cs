@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Register_HPPanel : MonoBehaviour
+public class Register_HPPanel : MonoBehaviour , ISingletonAttach
 {
     [SerializeField] GameObject hppanel_prefab;
     [SerializeField] Camera main_camera;
@@ -28,10 +28,12 @@ public class Register_HPPanel : MonoBehaviour
     }
 
     private void Reset() {
-        // 適当にメインカメラを設定 *気に食わない場合は手動でよろ
-        main_camera = Resources.FindObjectsOfTypeAll<Camera>()[0];
-
         // HPの情報を格納してあるインスタンスを取得
         charactor_paramater = GetComponent<Charactor_Paramater>();
+    }
+
+    public void Singleton_Attach(){
+        // 適当にメインカメラを設定 *気に食わない場合は手動でよろ
+        main_camera = Resources.FindObjectsOfTypeAll<Camera>()[0];
     }
 }

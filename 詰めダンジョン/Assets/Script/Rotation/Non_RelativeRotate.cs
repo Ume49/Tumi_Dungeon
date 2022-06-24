@@ -27,8 +27,6 @@ public class Non_RelativeRotate : MonoBehaviour
         var parent_rotation = transform.parent.rotation.eulerAngles;
         var current_rotation = parent_rotation*(-1.0f);
 
-        Debug.Log(current_rotation);
-
         transform.localRotation=Quaternion.Euler(current_rotation);
     }
 }
