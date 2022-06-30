@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class OneTurn_Undo : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] ReverseCommand_Executer executer;
+    [SerializeField] History_Stocker history;
 
-    // Update is called once per frame
-    void Update()
-    {
+    public void Call(){
+        // １ターン分のUndo処理を開始する
+
+        // スタックから１ターン分の履歴を取得
         
     }
 }
