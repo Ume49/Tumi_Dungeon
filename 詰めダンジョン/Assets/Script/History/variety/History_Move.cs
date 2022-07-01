@@ -11,12 +11,11 @@ public class History_Move : IHistory
     /// <summary>
     /// 座標はマップ上でのインデックス
     /// </summary>
-    public History_Move(Transform move_charactor, Vector2Int past_position, Vector2Int destination){
+    public History_Move(Transform move_charactor, Vector2Int past_position, Vector2Int destination) : base(IHistory.ID.Move, move_charactor)
+    {
         // 初期化入れる
         this.past_pos        = past_position;
         this.destination_pos = destination;
-        this.move_charactor  = move_charactor;
-
-        base.id              = IHistory.ID.Move;
+        this.move_charactor  = base.target_charactor;
     }
 }

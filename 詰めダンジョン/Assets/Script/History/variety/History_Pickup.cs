@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class History_Pickup : IHistory
 {
-    
+    public History_Pickup(Transform chara) : base(IHistory.ID.Pickup, chara)
+    {
+
+    }
 }

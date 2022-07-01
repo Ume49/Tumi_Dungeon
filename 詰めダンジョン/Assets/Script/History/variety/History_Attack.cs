@@ -10,10 +10,10 @@ public class History_Attack : IHistory
     public Transform damaged_charactor;
     public int damage;
 
-    public History_Attack(Transform damaged_charactor, int damage){
-        this.damaged_charactor = damaged_charactor;
-        this.damage            = damage;
+    public History_Attack(Transform damaged_charactor, int damage) : base(IHistory.ID.Attack ,damaged_charactor)
+    {
 
-        base.id                = IHistory.ID.Attack;
+        this.damaged_charactor = base.target_charactor;
+        this.damage            = damage;
     }
 }

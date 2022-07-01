@@ -12,4 +12,13 @@ public abstract class IHistory
     }
 
     public ID id;
+    
+    // ふんわりと「なにかしたキャラクター」
+    // * 派生クラスでより具体的な名前にする
+    public Transform target_charactor;
+
+    public IHistory( ID id, Transform target ){
+        this.id               = id;
+        this.target_charactor = target;
+    }
 }
