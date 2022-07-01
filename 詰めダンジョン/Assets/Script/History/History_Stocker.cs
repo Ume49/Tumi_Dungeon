@@ -8,7 +8,7 @@ public class History_Stocker : MonoBehaviour
     List<OneTurnHistory> histories;
 
     ///<summary>履歴閲覧用オブジェクトを返す</summary>
-    public OneTurnHistory[] histroy_view{
+    public OneTurnHistory[] history_view{
         get{
             return histories.ToArray();
         }
@@ -34,5 +34,18 @@ public class History_Stocker : MonoBehaviour
     public void Add(IHistory new_history)
     {
         histories[histories.Count - 1].Add(new_history);
+    }
+
+    // 1ターン分の履歴オブジェクトを返す
+    // 返した分はこっちのコンテナから削除される、Stack.Popみたいな挙動
+    public OneTurnHistory Pop(){
+        // 末尾のインデックス
+        int last_id = histories.Count-1;
+
+        var last_OTH=histories[last_id];
+
+        histories.RemoveAt(last_id);
+
+        return last_OTH;
     }
 }
