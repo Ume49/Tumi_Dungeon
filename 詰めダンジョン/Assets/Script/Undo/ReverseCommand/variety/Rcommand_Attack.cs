@@ -10,11 +10,9 @@ public class Rcommand_Attack : IReverseCommand
     // 回復すべき量
     public int heal_point;
 
-    public Rcommand_Attack(Transform damaged_chara, int damaged_point){
-        this.heal_chara = damaged_chara;
+    public Rcommand_Attack(Transform damaged_chara, int damaged_point) : base(IReverseCommand.ID.Attack, damaged_chara)
+    {
+        this.heal_chara = base.target_chara;
         this.heal_point = damaged_point;
-
-        // IDを忘れずに設定
-        base.id = IReverseCommand.ID.Attack;
     }
 }
