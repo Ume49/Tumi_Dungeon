@@ -20,7 +20,7 @@ public class History_Viewer : MonoBehaviour
         textbox.text="";
 
         int turn_count=1;
-        foreach (var turn in history.histroy_view){
+        foreach (var turn in history.history_view){
             // 見出し
             textbox.text+="Turn: "+turn_count.ToString()+"\n";
 
