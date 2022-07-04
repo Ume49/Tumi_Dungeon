@@ -98,9 +98,14 @@ public class Process_StateMachine : MonoBehaviour {
                 }
                 break;
             case State.Player_Act:
+                // 入力チェックが終了したら履歴を入れる枠を作成
+                history.Make_NewTurn_History();
+                
                 foreach(var w in player_act_script){
                     w.enabled = true;
                 }
+
+                
                 break;
 
             case State.Enemy_Judge:
@@ -125,11 +130,6 @@ public class Process_StateMachine : MonoBehaviour {
                     w.enabled = true;
                 }
                 break;
-        }
-
-        // ターンの最初を観測したら、このターンの履歴を入れる枠を作成
-        if(past_state==State.Turn_End && state_data==State.Input_Check){
-            history.Make_NewTurn_History();
         }
     }
 }

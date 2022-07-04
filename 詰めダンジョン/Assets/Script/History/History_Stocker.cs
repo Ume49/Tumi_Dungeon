@@ -20,11 +20,6 @@ public class History_Stocker : MonoBehaviour
         histories=new List<OneTurnHistory>();
     }
 
-    void Start()
-    {
-        Make_NewTurn_History();
-    }
-
     // このターンの履歴を記録する箱を作る
     public void Make_NewTurn_History()
     {
