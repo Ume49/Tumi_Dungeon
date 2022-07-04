@@ -84,6 +84,7 @@ public class Process_StateMachine : MonoBehaviour {
         all_disenable(enemy_judge_script);
         all_disenable(enemy_act_script);
         all_disenable(turn_end_script);
+        all_disenable(undo_script);
 
 
         // ターン終了->開始の瞬間を捉えたいので過去のステートを保存

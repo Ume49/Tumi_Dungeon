@@ -42,13 +42,12 @@ public class ReverseCommand_Executer : MonoBehaviour
     void SetNextAction(){
         // そもそも残りのコマンドが存在しない場合はUndoの終了通知をして終了
         if(reverseCommands.Count <= 0){
+            // なぜか呼ばれている
             state.End_Undo();
             return;
         }
 
         IReverseCommand current_command = this.reverseCommands.Pop();
-
-Debug.Log("a");
 
         // コマンドからアクションクラスを取得
         // あとアクションクラスに各種データを設定 *その都合でダウンキャストする
