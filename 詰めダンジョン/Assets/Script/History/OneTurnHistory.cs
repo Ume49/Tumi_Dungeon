@@ -6,7 +6,7 @@ using System.Linq;
 // 敵と自分の1ターン分の行動履歴
 public class OneTurnHistory
 {
-    Stack<IHistory> history_stack;
+    public Stack<IHistory> history_stack;
 
     ///<summary>1ターン分の履歴閲覧オブジェクト</summary>
     public IHistory[] oneturn_view {
