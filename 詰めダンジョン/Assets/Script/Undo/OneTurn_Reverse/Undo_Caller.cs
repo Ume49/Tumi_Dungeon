@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OneTurn_Undo : MonoBehaviour
+public class Undo_Caller : MonoBehaviour
 {
     [SerializeField] ReverseCommand_Executer executer;
     [SerializeField] History_Stocker history;
@@ -13,7 +13,11 @@ public class OneTurn_Undo : MonoBehaviour
         // 以降のUpdateからUndoが開始される
 
         // スタックから１ターン分の履歴を取得
-        OneTurnHistory current_histories=history.Pop();
+        OneTurnHistory current_histories;
+        if(history.tryPop(out current_histories) == false){
+            // 取得できなかったらこの関数の処理はすべてスキップ
+            return;
+        }
 
         // 逆再生コマンドを作成してセット
         executer.Make_ReverseCommand_fromHistory(current_histories);

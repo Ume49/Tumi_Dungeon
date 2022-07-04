@@ -45,13 +45,13 @@ public class Process_StateMachine : MonoBehaviour {
     // 内部的な話: ステートを専用のものに変更する。
     //           これは++では絶対にアクセスされることのない専用のものであり、ステートをInput_Check~Turn_Endの中のどこかに戻さないと++が正常に動作しなくなる。そのための処理がEnd_Undo
     public void Start_Undo(){
-        state_data = State.Undo;
+        state = State.Undo;
     }
 
     /// <summary> Undo処理の終了を通知する </summary>
     // 内部的な話: Undoを終了したら入力をチェックしていて欲しい、はず
     public void End_Undo(){
-        state_data = State.Input_Check;
+        state = State.Input_Check;
     }
 
     // ステートを一個回す

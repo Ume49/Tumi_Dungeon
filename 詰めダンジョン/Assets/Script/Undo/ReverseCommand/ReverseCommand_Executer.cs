@@ -48,6 +48,8 @@ public class ReverseCommand_Executer : MonoBehaviour
 
         IReverseCommand current_command = this.reverseCommands.Pop();
 
+Debug.Log("a");
+
         // コマンドからアクションクラスを取得
         // あとアクションクラスに各種データを設定 *その都合でダウンキャストする
         switch(current_command.id){

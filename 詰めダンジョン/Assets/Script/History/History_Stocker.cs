@@ -36,9 +36,17 @@ public class History_Stocker : MonoBehaviour
         histories[histories.Count - 1].Add(new_history);
     }
 
-    // 1ターン分の履歴オブジェクトを返す
-    // 返した分はこっちのコンテナから削除される、Stack.Popみたいな挙動
-    public OneTurnHistory Pop(){
+    /// <summary>
+    /// 1ターン分の履歴オブジェクトを返す 返した分はこっちのコンテナから削除される、Stack.Popみたいな挙動
+    /// </summary>
+    /// <returns>成功したらtrue、失敗したらfalse</returns>
+    public bool tryPop(out OneTurnHistory out_history){
+        // 1個もないなら処理を終了
+        if(histories.Count <= 0){
+            out_history = null;
+            return false;
+        }
+
         // 末尾のインデックス
         int last_id = histories.Count-1;
 
@@ -46,6 +54,8 @@ public class History_Stocker : MonoBehaviour
 
         histories.RemoveAt(last_id);
 
-        return last_OTH;
+        out_history = last_OTH;
+
+        return true;
     }
 }

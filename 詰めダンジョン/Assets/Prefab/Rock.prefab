@@ -18,6 +18,9 @@ GameObject:
   - component: {fileID: 5861852501958023663}
   - component: {fileID: 5861852501958023662}
   - component: {fileID: 5861852501958023652}
+  - component: {fileID: 106114181375473023}
+  - component: {fileID: 1762559374874529983}
+  - component: {fileID: 3640527074078336829}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Dynamic_Object
@@ -188,3 +191,43 @@ MonoBehaviour:
   map: {fileID: 0}
   position_onMap: {fileID: 0}
   action_executer: {fileID: 0}
+--- !u!114 &106114181375473023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5861852501958023655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 015283e17a7baf84d9bfbebf5568e86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1762559374874529983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5861852501958023655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08cd64335b859fb4a934bcdd962df15b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map_mover: {fileID: 0}
+  indexToPos: {fileID: 0}
+  speed: 0
+--- !u!114 &3640527074078336829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5861852501958023655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d673035f609bd48bad26ccc28f0705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heal_point: 0

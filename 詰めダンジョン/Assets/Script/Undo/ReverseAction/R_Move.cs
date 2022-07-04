@@ -36,4 +36,9 @@ public class R_Move : IReverseAction
 
         return false;
     }
+
+    void Reset() {
+        map_mover   = Resources.FindObjectsOfTypeAll<DynamicMap_Move>()[0];
+        indexToPos  = Resources.FindObjectsOfTypeAll<IndexToPos>()[0];
+    }
 }
