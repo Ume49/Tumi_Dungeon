@@ -6,6 +6,7 @@ public class OneTurn_Undo : MonoBehaviour
 {
     [SerializeField] ReverseCommand_Executer executer;
     [SerializeField] History_Stocker history;
+    [SerializeField] Process_StateMachine state;
 
     public void Call(){
         // １ターン分のUndo処理をする上で必要な情報をセットする
@@ -18,5 +19,6 @@ public class OneTurn_Undo : MonoBehaviour
         executer.Make_ReverseCommand_fromHistory(current_histories);
 
         // これから１ターン分逆再生することを通知
+        state.Start_Undo();
     }
 }

@@ -11,7 +11,7 @@ public class Process_StateMachine : MonoBehaviour {
         Enemy_Act,      // エネミーの行動
         Turn_End,       // ターン終了時処理  
         Count,          // 末尾
-        Reverse         // シーンのUndo処理
+        Undo            // シーンのUndo処理
                         // 上の普通にシーンを回してる処理の部分に入らないやつ(インクリメントで呼ばれないで欲しい)ので、末尾の下に配置
     }
 
@@ -45,7 +45,7 @@ public class Process_StateMachine : MonoBehaviour {
     // 内部的な話: ステートを専用のものに変更する。
     //           これは++では絶対にアクセスされることのない専用のものであり、ステートをInput_Check~Turn_Endの中のどこかに戻さないと++が正常に動作しなくなる。そのための処理がEnd_Undo
     public void Start_Undo(){
-        state_data = State.Reverse;
+        state_data = State.Undo;
     }
 
     /// <summary> Undo処理の終了を通知する </summary>
@@ -119,7 +119,7 @@ public class Process_StateMachine : MonoBehaviour {
                     w.enabled = true;
                 }
                 break;
-            case State.Reverse:
+            case State.Undo:
                 foreach(var w in undo_script){
                     w.enabled = true;
                 }
