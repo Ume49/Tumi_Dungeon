@@ -15,7 +15,8 @@ public class OneTurn_Undo : MonoBehaviour
         OneTurnHistory current_histories=history.Pop();
 
         // 逆再生コマンドを作成してセット
+        executer.Make_ReverseCommand_fromHistory(current_histories);
 
-        // 逆再生ステートをセット
+        // これから１ターン分逆再生することを通知
     }
 }
