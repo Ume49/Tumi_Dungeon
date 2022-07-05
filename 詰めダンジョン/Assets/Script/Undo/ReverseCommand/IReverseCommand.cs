@@ -45,6 +45,12 @@ public abstract class IReverseCommand
             {
                 return new Rcommand_Death(history.target_charactor);
             }
+            case IHistory.ID.ChageFront:
+            {
+                var front_cmd = (History_Front)history;
+
+                return new Rcommand_Front(history.target_charactor, front_cmd.past_front);
+            }
             default:
                 // 前caseですべての処理が終わるはずなのでここに到達する時点でエラー
                 Debug.LogError("ReverseCommandを作成する上でのエラー：渡されたHistroyのIDが不正です");

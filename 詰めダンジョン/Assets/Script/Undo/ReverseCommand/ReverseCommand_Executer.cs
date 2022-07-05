@@ -56,42 +56,7 @@ public class ReverseCommand_Executer : MonoBehaviour
         IReverseCommand current_command = this.reverseCommands.Pop();
 
         // コマンドからアクションクラスを取得
-        // あとアクションクラスに各種データを設定 *その都合でダウンキャストする
-        switch(current_command.id){
-            case IReverseCommand.ID.Move:
-            {
-                var r_move      = current_command.target_chara.GetComponent<R_Move>();
-                var _command    = (Rcommand_Move)current_command;
-
-                r_move.SetDestination(_command.end_pos);
-
-                current_action = r_move;
-            }
-            break;
-            case IReverseCommand.ID.Attack:
-            {
-                var r_heal      = current_command.target_chara.GetComponent<R_Heal>();
-                var _command    = (Rcommand_Attack)current_command;
-
-                r_heal.heal_point = _command.heal_point;
-                
-                current_action = r_heal;
-            }
-            break;
-            case IReverseCommand.ID.Death:
-            {
-                var r_revive = current_command.target_chara.GetComponent<R_Revive>();
-                
-                // 特に設定する項目がないのでここは少ない
-                current_action = r_revive;
-            }
-            break;
-            case IReverseCommand.ID.Pickup:
-            {
-                // TODO : PickUp関連作ったらここも作る
-            }
-            break;
-        }
+        current_action = IReverseAction.Get_ReverseAction_fromReverseCommand(current_command);
 
         return true;
     }    
