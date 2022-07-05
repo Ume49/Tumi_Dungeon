@@ -8,7 +8,8 @@ public abstract class IReverseCommand
         Move,
         Attack,
         Death,
-        Pickup
+        Pickup,
+        Front
     }
     public ID id;
     public Transform target_chara;
