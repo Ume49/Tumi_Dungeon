@@ -19,8 +19,8 @@ public class R_Move : IReverseAction
         var current_pos = GetComponent<CurrentPosition_OnMap>();
 
         // データ更新
-        map_mover.Move(current_pos.index, pos);
-        current_pos.index = pos;
+        map_mover.Move(current_pos.value, pos);
+        current_pos.value = pos;
 
         // ワールド座標での移動先を設定
         destination = indexToPos.Get(pos);

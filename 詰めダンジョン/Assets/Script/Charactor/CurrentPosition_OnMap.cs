@@ -5,5 +5,5 @@ using UnityEngine;
 // マップ上でのこのオブジェクトの座標
 public class CurrentPosition_OnMap : MonoBehaviour
 {
-    public Vector2Int index;
+    public Vector2Int value;
 }

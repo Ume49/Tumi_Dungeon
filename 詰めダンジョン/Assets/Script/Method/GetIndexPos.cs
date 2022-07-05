@@ -8,6 +8,6 @@ public class GetIndexPos
 {
     public static Vector2Int Get(Transform target)
     {
-        return target.GetComponent<CurrentPosition_OnMap>().index;
+        return target.GetComponent<CurrentPosition_OnMap>().value;
     }
 }

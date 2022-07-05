@@ -12,7 +12,7 @@ public class R_Revive : IReverseAction
         this.gameObject.SetActive(true);
 
         // マップ上でも復活させる
-        var pos = GetComponent<CurrentPosition_OnMap>().index;
+        var pos = GetComponent<CurrentPosition_OnMap>().value;
         map.dynamic_object_map[pos.x, pos.y] = transform;
 
         return true;

@@ -15,8 +15,8 @@ public class EnemyJudge_isAttack : IEnemyJudgeComponent
         System.Action<Direction> neighbor_add = (d)=>{
             Vector2Int delta = Direciton_Table.Direction_To_Table(d);
             
-            int x = position_onMap.index.x + delta.x;
-            int y = position_onMap.index.y + delta.y;
+            int x = position_onMap.value.x + delta.x;
+            int y = position_onMap.value.y + delta.y;
 
             Transform obj = map.dynamic_object_map[x,y];
 

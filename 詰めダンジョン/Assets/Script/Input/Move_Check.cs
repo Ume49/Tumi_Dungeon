@@ -47,7 +47,7 @@ public class Move_Check : MonoBehaviour {
         Vector2Int index_vec = Direciton_Table.Direction_To_Table(move_direction);
     
         // 目的地を計算
-        Vector2Int current_destination = index_vec + player_pos_index.index;
+        Vector2Int current_destination = index_vec + player_pos_index.value;
 
         // 目的地が侵入可能かどうか 侵入不可ならスキップ
         if (movable_Checker.Check(current_destination)!=true) {

@@ -95,7 +95,7 @@ public class MapGenereter : MonoBehaviour
                 map[index.x, index.y] = w;
 
                 // 現在位置をオブジェクトに覚えておいてもらう
-                w.GetComponent<CurrentPosition_OnMap>().index = index;
+                w.GetComponent<CurrentPosition_OnMap>().value = index;
             }
 
         };

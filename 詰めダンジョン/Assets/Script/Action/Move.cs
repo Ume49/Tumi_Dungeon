@@ -19,16 +19,16 @@ public class Move : IAction {
     public void SetDestination(Vector2Int destination_index) {
         // 履歴作成用に目的地と出発地を保存
         destination_onMap = destination_index;
-        past_pos_onMap    = player_index_pos.index;
+        past_pos_onMap    = player_index_pos.value;
 
         // 実際の移動に使う座標を決定
         destination = indexToPos.Get(destination_index);
 
         // マップ上での位置を変更
-        map_mover.Move(player_index_pos.index, destination_index);
+        map_mover.Move(player_index_pos.value, destination_index);
 
         // キャラクターが持っているインデックス座標を変更
-        player_index_pos.index = destination_index;
+        player_index_pos.value = destination_index;
     }
 
     public override bool _update() {

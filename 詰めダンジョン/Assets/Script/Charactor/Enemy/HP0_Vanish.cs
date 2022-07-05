@@ -27,7 +27,7 @@ public class HP0_Vanish : MonoBehaviour, ISingletonAttach
     // 消滅処理
     private void Vanish() {
         // マップ上から削除
-        map.dynamic_object_map[position.index.x, position.index.y] = null;
+        map.dynamic_object_map[position.value.x, position.value.y] = null;
 
         // シーン上から削除
         // DestroyではなくSetActiveなのはUndo操作によって復活させる可能性があるため

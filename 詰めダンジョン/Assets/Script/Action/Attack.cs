@@ -21,7 +21,7 @@ public class Attack : IAction {
     // 対象にダメージを与える処理
     void Damage() {
         // 方向から座標を計算
-        Vector2Int target_position = current_index_position.index + Direciton_Table.Direction_To_Table(current_direction);
+        Vector2Int target_position = current_index_position.value + Direciton_Table.Direction_To_Table(current_direction);
 
         // 範囲外参照ガード
         if(position_check.DynamicObject_Map(target_position)) return;
