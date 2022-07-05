@@ -8,7 +8,8 @@ public abstract class IHistory
         Move,
         Attack,
         Pickup,
-        Deth
+        Deth,
+        ChageFront
     }
 
     public ID id;
