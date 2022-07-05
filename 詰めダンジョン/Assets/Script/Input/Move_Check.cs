@@ -1,10 +1,10 @@
 using UnityEngine;
 
 public class Move_Check : MonoBehaviour {
-    [SerializeField] Transform player;
-    [SerializeField] Movable_Checker movable_Checker;
-    [SerializeField] IndexToPos indexToPos;
-    [SerializeField] Process_StateMachine stateMachine;
+    [SerializeField] Transform              player;
+    [SerializeField] Movable_Checker        movable_Checker;
+    [SerializeField] IndexToPos             indexToPos;
+    [SerializeField] Process_StateMachine   stateMachine;
 
     // playerから引っ張ってこれるやつら
     CurrentPosition_OnMap player_pos_index;
