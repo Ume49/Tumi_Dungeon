@@ -1808,7 +1808,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1113882783}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.99999493
+  m_Size: 0.9672586
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2298,7 +2298,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0008466687, y: 0.00025837455}
+  m_AnchoredPosition: {x: 3.3154187, y: 0.00025837455}
   m_SizeDelta: {x: -15.6376, y: 1329.7134}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &979393976
@@ -4871,7 +4871,7 @@ MonoBehaviour:
     output_direction: 2
   - check_key: 100
     output_direction: 1
-  dontMove_key: 32
+  dontMove_key: 304
 --- !u!114 &2106894985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5292,11 +5292,12 @@ GameObject:
   - component: {fileID: 3415187823079119330}
   - component: {fileID: 3415187823079119336}
   - component: {fileID: 3415187823079119335}
+  - component: {fileID: 3415187823079119337}
   - component: {fileID: 7390383271114264155}
   - component: {fileID: 3415187823079119332}
-  - component: {fileID: 3415187823079119333}
   - component: {fileID: 6}
   - component: {fileID: 3415187823079119334}
+  - component: {fileID: 3415187823079119333}
   m_Layer: 0
   m_Name: Player
   m_TagString: Dynamic_Object
@@ -5379,9 +5380,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move_script: {fileID: 7390383271114264156}
   attack_script: {fileID: 3415187823079119330}
+  player_pos: {fileID: 7390383271114264155}
+  front: {fileID: 3415187823079119333}
   stateMachine: {fileID: 4579797161966893410}
   turn_counter: {fileID: 2106894983}
-  player_pos: {fileID: 7390383271114264155}
 --- !u!114 &3415187823079119330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5438,7 +5440,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3415187823079119325}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3180a03a911d3cc41a26b98391ba5bcd, type: 3}
+  m_Script: {fileID: 11500000, guid: a0c5c33ae12bd294dab74eefe0b844ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
@@ -5446,6 +5448,7 @@ MonoBehaviour:
   down_rotation: {x: 0, y: 180, z: 0}
   right_rotation: {x: 0, y: 90, z: 0}
   left_rotation: {x: 0, y: 270, z: 0}
+  history: {fileID: 2106894991}
 --- !u!114 &3415187823079119334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5489,6 +5492,20 @@ MonoBehaviour:
   map_mover: {fileID: 2106894982}
   indexToPos: {fileID: 6788979228463796935}
   speed: 7
+--- !u!114 &3415187823079119337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3415187823079119325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ac917e822bba3448b3d3288a03ffc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  has_chage_front_direction: 0
+  front: {fileID: 3415187823079119333}
 --- !u!1001 &3459582261555955203
 PrefabInstance:
   m_ObjectHideFlags: 0

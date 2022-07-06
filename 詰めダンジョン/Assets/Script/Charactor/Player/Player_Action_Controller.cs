@@ -13,11 +13,15 @@ public class Player_Action_Controller : MonoBehaviour {
     [System.NonSerialized] public IAction current_action;
     public ICommand command;
 
-    [SerializeField] Move move_script;
+    [SerializeField] Move   move_script;
     [SerializeField] Attack attack_script;
-    [SerializeField] Process_StateMachine stateMachine;
-    [SerializeField] Turn_Counter turn_counter;
     [SerializeField] CurrentPosition_OnMap player_pos;
+    [SerializeField] Player_Front front;
+
+    [SerializeField] Process_StateMachine stateMachine;
+    [SerializeField] Turn_Counter         turn_counter;
+
+    
 
     void OnEnable()
     {
@@ -53,6 +57,9 @@ public class Player_Action_Controller : MonoBehaviour {
                 current_action = attack_script;
             break;
         }
+
+        // 行動前に向きの履歴を投げる
+        front.Throw_History();
     }
 
     void Update() {

@@ -11,8 +11,9 @@ public class Front : MonoBehaviour
     [SerializeField] Vector3 down_rotation;
     [SerializeField] Vector3 right_rotation;
     [SerializeField] Vector3 left_rotation;
+
     // 向きの変更
-    public void Change_Direction(Direction d) {
+    public virtual void Change_Direction(Direction d) {
         direction = d;
 
         // アタッチされているオブジェクトのRotationも対応するものに変更する

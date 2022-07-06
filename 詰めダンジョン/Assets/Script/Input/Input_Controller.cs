@@ -38,6 +38,8 @@ public class Input_Controller : MonoBehaviour
 
                 // 移動
                 move_event.Invoke(elem.output_direction);
+
+                return;
             }
         }
     }
