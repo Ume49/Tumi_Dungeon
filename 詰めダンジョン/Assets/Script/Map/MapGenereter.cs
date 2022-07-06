@@ -8,6 +8,8 @@ delegate void ref_Action(string tag, ref Transform[,] array);
 // シーンのオブジェクトからマップ情報を生成するクラス
 public class MapGenereter : MonoBehaviour
 {
+    [SerializeField] Transform sceneObject_parent;
+
     [SerializeField] MAP map_class;
     [SerializeField] IndexToPos index_to_pos;
     [SerializeField] PosToIndex pos_to_index;
@@ -23,7 +25,7 @@ public class MapGenereter : MonoBehaviour
         List<Transform> all_object = new List<Transform>();
 
         // 作成したリストに全て取得
-        GetAllChildren.Get(transform, all_object);
+        GetAllChildren.Get(sceneObject_parent, all_object);
 
         {   // 当たり判定マップを作成
             // 子オブジェクトから当たり判定に使用するものを抽出

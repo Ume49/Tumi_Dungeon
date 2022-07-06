@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class All_Trim : MonoBehaviour
 {
+    [SerializeField] Transform parent;
     public void Trim()
     {
-        // 親オブジェクトを取得
-        var parent = transform.parent;
-
         // 子オブジェクトを取得するリストを作成して、取得
         List<Transform> all_children = new List<Transform>();
         GetAllChildren.Get(parent, all_children);
