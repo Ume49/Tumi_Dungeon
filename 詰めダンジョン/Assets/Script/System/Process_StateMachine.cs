@@ -104,22 +104,17 @@ public class Process_StateMachine : MonoBehaviour {
                 foreach(var w in player_act_script){
                     w.enabled = true;
                 }
-
-                
                 break;
-
             case State.Enemy_Judge:
                 foreach(var w in enemy_judge_script){
                     w.enabled = true;
                 }
                 break;
-
             case State.Enemy_Act:
                 foreach(var w in enemy_act_script){
                     w.enabled = true;
                 }
                 break;
-                
             case State.Turn_End:
                 foreach(var w in turn_end_script){
                     w.enabled = true;
