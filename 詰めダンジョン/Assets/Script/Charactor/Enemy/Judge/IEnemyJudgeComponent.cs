@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Warning EnemyJudgeComponentは動かしたいエネミーにアタッチして使用する
 public abstract class IEnemyJudgeComponent : MonoBehaviour , ISingletonAttach , IBroComponent_Attach
 {
     [SerializeField] protected MAP map;
