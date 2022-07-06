@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Vector3toVector2
+public class Vector3to2
 {
     // Vector3をxz平面上での二次元ベクトルに変換
     // y=0にするだけ
