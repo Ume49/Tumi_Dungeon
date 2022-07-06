@@ -57,7 +57,7 @@ public class Enemy_Action_Executer : MonoBehaviour {
                 // 目的地計算
                 var current_pos = command_casted.move_charactor.GetComponent<CurrentPosition_OnMap>();
 
-                var destinatino_pos = current_pos.value + Direciton_Table.Direction_To_Table(command_casted.direction);
+                var destinatino_pos = current_pos.value + Direciton_Table.Direction_To_Pos(command_casted.direction);
 
                 move_component.SetDestination(destinatino_pos);
 

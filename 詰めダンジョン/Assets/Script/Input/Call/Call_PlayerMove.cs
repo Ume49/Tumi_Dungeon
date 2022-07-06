@@ -25,7 +25,7 @@ public class Call_PlayerMove : MonoBehaviour
     public void Call(Direction direction_input){
         {   // 移動先が実際に移動できる場所なのかチェック
             // 方向をベクトルに変換
-            Vector2Int move_vec = Direciton_Table.Direction_To_Table(direction_input);
+            Vector2Int move_vec = Direciton_Table.Direction_To_Pos(direction_input);
 
             // 目的地を導出
             Vector2Int destination = move_vec + player_pos.value;

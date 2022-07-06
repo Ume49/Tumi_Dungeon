@@ -13,7 +13,7 @@ public class EnemyJudge_isAttack : IEnemyJudgeComponent
 
         // 方向から隣接オブジェクトを取得・追加するラムダ式
         System.Action<Direction> neighbor_add = (d)=>{
-            Vector2Int delta = Direciton_Table.Direction_To_Table(d);
+            Vector2Int delta = Direciton_Table.Direction_To_Pos(d);
             
             int x = position_onMap.value.x + delta.x;
             int y = position_onMap.value.y + delta.y;

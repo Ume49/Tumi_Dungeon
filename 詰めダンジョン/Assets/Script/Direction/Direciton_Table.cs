@@ -12,7 +12,7 @@ public class Direciton_Table
         {Direction.LEFT,    new Vector2Int(-1,0)}
     };
 
-    public static Vector2Int Direction_To_Table(Direction direction)
+    public static Vector2Int Direction_To_Pos(Direction direction)
     {
         return table[direction];
     }

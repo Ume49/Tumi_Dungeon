@@ -43,7 +43,7 @@ public class Player_Action_Controller : MonoBehaviour {
                 var move_cmd=(Command_Move)command;
                 
                 // 目的地を現在地+方向ベクトルで算出
-                Vector2Int destination= player_pos.value+Direciton_Table.Direction_To_Table(move_cmd.direction);
+                Vector2Int destination= player_pos.value+Direciton_Table.Direction_To_Pos(move_cmd.direction);
 
                 move_script.SetDestination(destination);
 
