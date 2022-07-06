@@ -5,7 +5,7 @@ using UnityEngine;
 public class Vector2_to_Direction
 {
     /// <summary>ベクトルを分解してx,y要素の正負からDirectionを作成、指定されたリストに追加する</summary>
-    static public void Make_andAddtoList(Vector2 v, List<Direction> output_list){
+    static public void Convert_AddList(Vector2 v, List<Direction> output_list){
         
         if(v.x > 0){
             output_list.Add(Direction.RIGHT);
