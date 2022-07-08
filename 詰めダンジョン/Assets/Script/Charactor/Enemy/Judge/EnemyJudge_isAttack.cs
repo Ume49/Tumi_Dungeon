@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyJudge_isAttack : IEnemyJudgeComponent
 {
     [SerializeField] string player_name;
+    [SerializeField] Check_PositionInMap checker;
     
     public override bool _judge()
     {
@@ -15,10 +16,12 @@ public class EnemyJudge_isAttack : IEnemyJudgeComponent
         System.Action<Direction> neighbor_add = (d)=>{
             Vector2Int delta = Direciton_Table.Direction_To_Pos(d);
             
-            int x = position_onMap.value.x + delta.x;
-            int y = position_onMap.value.y + delta.y;
+            Vector2Int current_pos = position_onMap.value + delta;
 
-            Transform obj = map.dynamic_object_map[x,y];
+            // 範囲外参照ガード
+            if(checker.DynamicObject_Map(current_pos)) return;
+
+            Transform obj = map.dynamic_object_map[current_pos.x, current_pos.y];
 
             neighbor.Add((obj, d));
         };
