@@ -5,7 +5,6 @@ public class EnemyJudge_Move : IEnemyJudgeComponent {
     [SerializeField] Transform player;
 
     [SerializeField] Movable_Checker checker;
-    [SerializeField] CurrentPosition_OnMap own_pos;
 
     public override bool _judge() {
         // プレイヤーへの向きを取得
@@ -31,7 +30,7 @@ public class EnemyJudge_Move : IEnemyJudgeComponent {
         List<Direction> has_delete = new List<Direction>();
 
         foreach(var d in candidate){
-            var current_pos = own_pos.value + Direciton_Table.Direction_To_Pos(d);
+            var current_pos = base.position_onMap.value + Direciton_Table.Direction_To_Pos(d);
 
             if(checker.Check(current_pos) == false){
                 // 削除すべき要素をメモ
