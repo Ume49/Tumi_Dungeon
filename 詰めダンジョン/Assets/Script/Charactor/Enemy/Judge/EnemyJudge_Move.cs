@@ -22,7 +22,7 @@ public class EnemyJudge_Move : IEnemyJudgeComponent {
         // 移動候補のうち、先頭のものを投げて終わり
         base.action_executer.AddCommandQueue(new Command_Move(move_candidate[0], transform));
 
-        return false;
+        return true;
     }
 
     // 作成した移動方向に実際に動けるのかチェックして、ダメな奴は削除する
@@ -63,13 +63,13 @@ public class EnemyJudge_Move : IEnemyJudgeComponent {
         // x軸方向の方がより近づける場合 x,yの順番
         // 等価の場合はこっちにしておく（特に理由はない）
         if(x_mag >= y_mag){
-            result.Add(Vec_to_Direction(vec_x.x, Axis.X));
-            result.Add(Vec_to_Direction(vec_y.y, Axis.Y));
+            if(vec_x.x > 0) result.Add(Vec_to_Direction(vec_x.x, Axis.X));
+            if(vec_y.y > 0) result.Add(Vec_to_Direction(vec_y.y, Axis.Y));
         }
         else{
             // y軸方向の方がより近づける場合は、y,xの順番
-            result.Add(Vec_to_Direction(vec_y.y, Axis.Y));
-            result.Add(Vec_to_Direction(vec_x.x, Axis.X));
+            if(vec_y.y > 0) result.Add(Vec_to_Direction(vec_y.y, Axis.Y));
+            if(vec_x.x > 0) result.Add(Vec_to_Direction(vec_x.x, Axis.X));
         }
 
         return result;
