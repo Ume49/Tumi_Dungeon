@@ -5,10 +5,10 @@ using UnityEngine;
 public class StageEnd : MonoBehaviour
 {
     public void GameOver() {
-        Debug.Log("ゲームオーバー");
+        Debug.Log("繧ｲ繝ｼ繝繧ｪ繝ｼ繝舌�ｼ");
     }
 
     public void GameClear() {
-        Debug.Log("ゲームクリア");
+        Debug.Log("繧ｲ繝ｼ繝繧ｯ繝ｪ繧｢");
     }
 }

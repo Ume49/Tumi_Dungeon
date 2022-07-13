@@ -8,7 +8,7 @@ public class TurnEnd_Operator : MonoBehaviour {
     private void OnEnable() {
         foreach (var w in once_process) { w.Execute(); }
 
-        // ˆ—‚ª‘S•”I‚í‚Á‚½‚Ì‚ÅƒXƒe[ƒg‘JˆÚ
+        // å‡¦ç†ãŒå…¨éƒ¨çµ‚ã‚ã£ãŸã®ã§ã‚¹ãƒ†ãƒ¼ãƒˆé·ç§»
         state++;
     }
 }

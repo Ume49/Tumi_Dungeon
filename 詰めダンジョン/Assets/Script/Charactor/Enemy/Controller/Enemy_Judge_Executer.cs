@@ -9,6 +9,8 @@ public class Enemy_Judge_Executer : MonoBehaviour
     void OnEnable() {
         // 子関係にあるエネミー達に思考させる
         foreach (Transform w in transform) {
+            if(w.gameObject.activeSelf == false) continue;
+
             var brain = w.GetComponent<Enemy_Brain>();
 
             brain.Judge();

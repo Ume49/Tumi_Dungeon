@@ -6,7 +6,7 @@ public class GameEnd_Check : ITE_Process {
 
     public override void Execute() {
         if (turn.turn_limit > 0) return;
-        // ターンが残っておらず、ここまで辿り着いたならゲームオーバー
+        // 繧ｿ繝ｼ繝ｳ縺梧ｮ九▲縺ｦ縺翫ｉ縺壹√％縺薙∪縺ｧ霎ｿ繧顔捩縺�縺溘↑繧峨ご繝ｼ繝繧ｪ繝ｼ繝舌�ｼ
         stage_end.GameOver();
     }
 }

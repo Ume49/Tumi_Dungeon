@@ -7,6 +7,8 @@ public class EnemyJudge_Move : IEnemyJudgeComponent {
     [SerializeField] Movable_Checker checker;
 
     public override bool _judge() {
+        // TODO なぜか左側へ移動しようとしないので、その辺修正する
+
         // プレイヤーへの向きを取得
         var to_player = Vector3to2.xz_plane(player.position - transform.position);
 

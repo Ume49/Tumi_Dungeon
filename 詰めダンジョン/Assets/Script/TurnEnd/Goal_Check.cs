@@ -9,7 +9,7 @@ public class Goal_Check : ITE_Process
 
     public override void Execute() {
         if (player_under_check.Check() == Static_Object_Tag.Kind.Goal) {
-            // ゴールを踏んでたらゲームクリア
+            // 繧ｴ繝ｼ繝ｫ繧定ｸ上ｓ縺ｧ縺溘ｉ繧ｲ繝ｼ繝繧ｯ繝ｪ繧｢
             stage_end.GameClear();
         }
     }

@@ -18,28 +18,28 @@ public class Attack : IAction {
         return true;
     }
 
-    // ‘ÎÛ‚Éƒ_ƒ[ƒW‚ğ—^‚¦‚éˆ—
+    // å¯¾è±¡ã«ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’ä¸ãˆã‚‹å‡¦ç†
     void Damage() {
-        // •ûŒü‚©‚çÀ•W‚ğŒvZ
+        // æ–¹å‘ã‹ã‚‰åº§æ¨™ã‚’è¨ˆç®—
         Vector2Int target_position = current_index_position.value + Direciton_Table.Direction_To_Pos(current_direction);
 
-        // ”ÍˆÍŠOQÆƒK[ƒh
+        // ç¯„å›²å¤–å‚ç…§ã‚¬ãƒ¼ãƒ‰
         if(position_check.DynamicObject_Map(target_position)) return;
 
-        // À•W‚©‚çUŒ‚‚ğ—^‚¦‚éƒIƒuƒWƒFƒNƒg‚ğæ“¾
+        // åº§æ¨™ã‹ã‚‰æ”»æ’ƒã‚’ä¸ãˆã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å–å¾—
         Transform target_transform = map.dynamic_object_map[target_position.x, target_position.y];
 
-        // ƒkƒ‹QÆƒK[ƒh
+        // ãƒŒãƒ«å‚ç…§ã‚¬ãƒ¼ãƒ‰
         if(target_transform==null) return;
 
         var target_param = target_transform.GetComponent<Charactor_Paramater>();
 
         int damage=CulcDamage.Culc(attack_param, target_param);
 
-        // ƒ_ƒ[ƒW‚ğ—^‚¦‚é
+        // ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’ä¸ãˆã‚‹
         target_param.Damage(damage);
 
-        // UŒ‚‚ğ‚µ‚½‚Ì‚Å—š—ğ‚ğì¬
+        // æ”»æ’ƒã‚’ã—ãŸã®ã§å±¥æ­´ã‚’ä½œæˆ
         history.Add(new History_Attack(target_transform, damage));
     }
 

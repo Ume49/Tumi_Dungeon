@@ -1,8 +1,8 @@
 using UnityEngine;
 
-// ƒ^[ƒ“I—¹Žž‚Ìˆ—ƒCƒ“ƒ^[ƒtƒF[ƒX
+// ã‚¿ãƒ¼ãƒ³çµ‚äº†æ™‚ã®å‡¦ç†ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ãƒ¼ã‚¹
 public abstract class ITE_Process : MonoBehaviour {
    
-    /// <returns> ˆ—‚ªI—¹‚µ‚Ä‚é‚È‚çtrue </returns>
+    /// <returns> å‡¦ç†ãŒçµ‚äº†ã—ã¦ã‚‹ãªã‚‰true </returns>
     public abstract void Execute();
 }
